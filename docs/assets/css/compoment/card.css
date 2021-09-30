@@ -1,0 +1,132 @@
+/* card */
+
+.card-pin {
+    background-color: transparent;
+    /* border: none; */
+}
+
+
+/* .card-shadow {
+    shadow : 
+} */
+
+.card-museum-footer {
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: transparent;
+}
+
+.title-card-museum-footer {
+    font-size: 1.1rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.museum-card-img {}
+
+.user-card__avata-user {
+    height: 35px;
+    width: 80px;
+    /* border: 1px solid black; */
+    background-color: aliceblue;
+}
+
+.user-card__avata-image {
+    height: 35px;
+}
+
+.user-card__name-user {
+    font-size: 0.9rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+
+/* card item top */
+
+.card-item-top {
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    padding: 10px 10px 0 10px;
+    justify-content: space-between;
+    color: var(--musesum-text-color-white);
+    align-items: center;
+}
+
+.card-item-top__category-item {
+    font-size: 1rem;
+}
+
+.category-item__category-icon {
+    font-size: 0.7rem;
+}
+
+
+/* card item bottom */
+
+.card-img {
+    position: relative;
+}
+
+.card-item-bottom {
+    font-size: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    color: var(--musesum-text-color-white);
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.card-item-bottom_link {
+    border-radius: 24px;
+    padding: 0 12px;
+    margin-top: 4px;
+}
+
+.card-item-bottom_link>a {
+    color: var(--musesum-text-color-white);
+    text-decoration: none;
+}
+
+.card-item-bottom_action-item {
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    margin-left: 5px;
+    /* padding: 8px; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-item-bottom_action-item>i {
+    /* margin: 0 auto; */
+}
+
+.card-item-bottom_action-item:hover {
+    background-color: rgba(240, 248, 255, 0.3);
+    animation: fadeInHoverItemCard ease-in 0.3s;
+    /* border-radius: 50%; */
+}
+
+.card-item-bottom_link:hover {
+    background-color: rgba(240, 248, 255, 0.3);
+    animation: fadeInHoverItemCard ease-in 0.3s;
+}
+
+@keyframes fadeInHoverItemCard {
+    from {
+        background-color: rgba(240, 248, 255, 0.1);
+    }
+    to {
+        background-color: rgba(240, 248, 255, 0.3);
+    }
+}

@@ -1,7 +1,25 @@
 :root {
+    --musesum-bg-body: #FFF1D9;
     --musesum-bg-btn: rgba(239, 210, 121, 0.32);
     --musesum-bg-btn-active: #EFD279;
-    --musesum-text-color: rgb(0, 0, 0);
+    --musesum-text-color-black: rgb(0, 0, 0);
+    --musesum-bg-btn-save: #F2A447;
+    --musesum-text-color-white: rgb(255, 255, 255);
+}
+
+html {}
+
+body {
+    font-size: 16px;
+    /* font-family: 'Roboto', sans-serif; */
+    font-family: 'Be Vietnam', sans-serif !important;
+}
+
+
+/* navbar */
+
+.bg-navbar-museum {
+    color: var(--musesum-bg-body);
 }
 
 
@@ -15,14 +33,56 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    outline: none;
+    border: none;
 }
 
 .btn-musesum.btn-musesum--primary {
-    color: var(--musesum-text-color);
+    color: var(--musesum-text-color-black);
     background-color: var(--musesum-bg-btn);
 }
 
 .btn-musesum.btn-musesum--primary-active {
-    color: var(--musesum-text-color);
+    font-weight: 400;
+    color: var(--musesum-text-color-black);
     background-color: var(--musesum-bg-btn-active);
 }
+
+.btn-musesum.btn-musesum--primary-save {
+    color: #fff;
+    font-weight: 500;
+    min-width: 60px;
+    background-color: var(--musesum-bg-btn-save);
+    padding: 0 10px;
+    /* outline: none;
+    border: none; */
+}
+
+
+/* guide */
+
+.guide {
+    /* position: relative; */
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    /* right: 10px;
+    bottom: 10px; */
+}
+
+.guide_image-bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guide_image-bg-icon {
+    font-size: 1.5rem;
+}
+
+
+/* scrool-top */

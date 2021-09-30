@@ -11,19 +11,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,100;0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href='https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"> />
+
+    <!-- themefy icon -->
+    <link rel="stylesheet" href="assets/css/themify/themify-icons.css">
+    <link rel="stylesheet" href="assets/css/themify/ie7/ie7.css">
+
 
     <!-- customs -->
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/app.css">
 
+    <link rel="stylesheet" href="assets/css/compoment/card.css">
+
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
             <a class="navbar-brand font-weight-bolder mr-3" href="index.html"><img src="assets/image/logo.png"></a>
             <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,7 +46,7 @@
                         </div>
                     </form>
                 </ul>
-                <ul class="navbar-nav ml-auto align-items-center">
+                <!-- <ul class="navbar-nav ml-auto align-items-center">
                     <li class="nav-item">
                         <a class="nav-link active" href="index.html">Home</a>
                     </li>
@@ -47,7 +56,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="author.html"><img class="rounded-circle mr-2" src="assets/image/av.png" width="30"><span class="align-middle">Author</span></a>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </nav>
     </header>
@@ -57,7 +66,7 @@
         <div class="main">
             <section>
                 <div class="row">
-                    <nav class="navbar navbar-expand-lg navbar-light bg-white pl-2 pr-2">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-navbar-museum pl-2 pr-2">
                         <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExplore" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
@@ -86,178 +95,764 @@
                 <div class="card-columns d-flex">
                     <div class="row">
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-1.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-1.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-2.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-2.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-5.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-3.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-2.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-13.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-3.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-14.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-4.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-15.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-2.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-16.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-2.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-17.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-18.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-19.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-20.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-9.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-9.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-9.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-9.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-9.jpg" alt="Card image">
+
+                                    <div class="d-flex card-item-top">
+                                        <div class="card-item-top__category-item">
+                                            <span class="category-item__category-name">Cổ vật</span>
+                                            <i class="ti-angle-double-down category-item__category-icon"></i>
+                                        </div>
+                                        <div class="card-item-top__save-card">
+                                            <button class="btn-musesum btn-musesum--primary-save">Lưu</button>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex card-item-bottom">
+                                        <div class="card-item-bottom_link">
+                                            <a href="#">abc.com</a>
+                                        </div>
+                                        <div class="card-item-bottom_action">
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="fas fa-share-alt-square"></i>
+                                            </span>
+                                            <span class="card-item-bottom_action-item rounded-circle">
+                                                <i class="far fa-flag"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <span class="user-card__avata-user rounded-circle">
+                                                <img src="assets/image/Bot-avt.png" class="user-card__avata-image img" alt="">
+
+                                            </span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <!-- <i class="fas fa-heart pr-1 user-like__liked"></i> -->
+                                            <i class="far fa-heart pr-1 user-like__unlike"></i>
+                                            <span class="user-like__amount-like">10</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-6 col-lg-3">
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-5.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-6.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-5.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-5.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3">
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-5.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-2.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-7.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card card-pin">
-                                <img class="card-img" src="assets/image/image-item-test/item-8.jpg" alt="Card image">
-                                <div class="overlay">
-                                    <h2 class="card-title title">Cool Title</h2>
-                                    <div class="more">
-                                        <a href="post.html">
-                                            <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i> More </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
                 </div>
             </section>
+
+            <section>
+                <div class="guide fixed-bottom rounded-circle shadow-lg ml-auto mr-2 mb-3">
+                    <div class="guide_image-bg">
+                        <i class="fas fa-question guide_image-bg-icon"></i>
+                    </div>
+                </div>
+            </section>
+
+
         </div>
     </div>
 
@@ -266,6 +861,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
 </body>
 
 </html>
