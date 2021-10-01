@@ -70,6 +70,12 @@
     -webkit-transition: linear 0.2s ease;
 }
 
+.nav-item-category {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 @keyframes fadeInSlide {
     from {
         opacity: 0.2;

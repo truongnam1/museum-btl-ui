@@ -88,8 +88,8 @@ body {
 .guide {
     /* position: relative; */
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: #fff;
     /* right: 10px;
     bottom: 10px; */
@@ -106,7 +106,7 @@ body {
 }
 
 .guide_image-bg-icon {
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 

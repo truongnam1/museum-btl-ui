@@ -48,12 +48,12 @@ div.card-img:hover .img-overlay {
     width: 40px;
     height: 40px;
     padding-left: 40px;
-    background-image: url(/docs/assets/image/Bot-avt.png);
+    background-image: url(https://i.ibb.co/0Ywq6vK/Bot-avt.png);
     background-color: aliceblue;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    object-fit: contain;
+    /* object-fit: contain; */
 }
 
 .user-card__avata-image {
