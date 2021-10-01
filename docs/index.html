@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> -->
 
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:ital,wght@0,100;0,300;0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
@@ -41,8 +41,8 @@
 
             <div class="collapse navbar-collapse" id="navbarsDefault">
                 <ul class="navbar-nav mr-auto align-items-center">
-                    <form class="bd-search hidden-sm-down">
-                        <input type="text" class="form-control bg-graylight border-0 font-weight-bold" id="search-input" placeholder="Tìm kiếm..." autocomplete="off">
+                    <form class="bd-search hidden-sm-down" id="header-search-form">
+                        <input type="text" class="form-control border-0 font-weight-bold" id="search-input" placeholder="Tìm kiếm..." autocomplete="off">
                         <div class="dropdown-menu bd-search-results" id="search-results">
                         </div>
                     </form>
@@ -65,13 +65,14 @@
     <div class="container">
 
         <div class="main">
+            <!-- navbar category -->
             <section>
                 <div class="row mb-1 mt-1">
 
-                    <nav class="navbar navbar-expand-lg navbar-light bg-navbar-museum pl-2 pr-2 mw-100">
-                        <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExplore" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <nav class="navbar navbar-expand navbar-light bg-navbar-museum pl-2 pr-2 mw-100">
+                        <!-- <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExplore" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
-                        </button>
+                        </button> -->
 
                         <div class="collapse navbar-collapse" id="navbar-category">
 
@@ -165,20 +166,20 @@
                                     <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
                                     <div class="card-footer__bottom d-flex justify-content-between">
                                         <div class="pr-2 user-card d-flex align-items-center">
-                                            <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt="">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
                                             <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
                                         </div>
                                         <div class="user-like d-flex align-items-center">
-                                            <!-- <i class="fas fa-heart pr-1 user-like_icon user-like__liked"></i> -->
-                                            <i class="far fa-heart pr-1 user-like_icon user-like__unlike"></i>
-                                            <span class="user-like__amount-like">10</span>
+                                            <i class="fas fa-heart pr-1 user-like_icon user-like__liked show"></i>
+                                            <span class="user-like__amount-like">100</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card card-pin shadow-lg card-lg">
                                 <div class="card-img">
-                                    <img class="card-img" src="assets/image/image-item-test/item-2.jpg" alt="Card image">
+                                    <img class="card-img" src="assets/image/image-item-test/item-1.jpg" alt="Card image">
                                     <div class="img-overlay">
                                         <div class="d-flex card-item-top">
                                             <div class="card-item-top__category-item">
@@ -209,20 +210,20 @@
                                     <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
                                     <div class="card-footer__bottom d-flex justify-content-between">
                                         <div class="pr-2 user-card d-flex align-items-center">
-                                            <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt="">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
                                             <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
                                         </div>
                                         <div class="user-like d-flex align-items-center">
-                                            <!-- <i class="fas fa-heart pr-1 user-like_icon user-like__liked"></i> -->
-                                            <i class="far fa-heart pr-1 user-like_icon user-like__unlike"></i>
-                                            <span class="user-like__amount-like">10</span>
+                                            <i class="fas fa-heart pr-1 user-like_icon user-like__liked show"></i>
+                                            <span class="user-like__amount-like">100</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card card-pin shadow-lg card-lg">
                                 <div class="card-img">
-                                    <img class="card-img" src="assets/image/image-item-test/item-7.jpg" alt="Card image">
+                                    <img class="card-img" src="assets/image/image-item-test/item-1.jpg" alt="Card image">
                                     <div class="img-overlay">
                                         <div class="d-flex card-item-top">
                                             <div class="card-item-top__category-item">
@@ -253,69 +254,17 @@
                                     <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
                                     <div class="card-footer__bottom d-flex justify-content-between">
                                         <div class="pr-2 user-card d-flex align-items-center">
-                                            <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt="">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
                                             <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
                                         </div>
                                         <div class="user-like d-flex align-items-center">
-                                            <!-- <i class="fas fa-heart pr-1 user-like_icon user-like__liked"></i> -->
-                                            <i class="far fa-heart pr-1 user-like_icon user-like__unlike"></i>
-                                            <span class="user-like__amount-like">10</span>
+                                            <i class="fas fa-heart pr-1 user-like_icon user-like__liked show"></i>
+                                            <span class="user-like__amount-like">100</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-                        </div>
-                        <div class="col-sm-12 col-md-6 col-lg-3">
-
-                            <div class="card card-pin shadow-lg card-lg">
-                                <div class="card-img">
-                                    <img class="card-img" src="assets/image/image-item-test/item-11.jpg" alt="Card image">
-                                    <div class="img-overlay">
-                                        <div class="d-flex card-item-top">
-                                            <div class="card-item-top__category-item">
-                                                <span class="category-item__category-name">Cổ vật</span>
-                                                <i class="ti-angle-double-down category-item__category-icon"></i>
-                                            </div>
-                                            <div class="card-item-top__save-card">
-                                                <button class="btn-musesum btn-musesum--primary-save"><span>Lưu</span></button>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex card-item-bottom">
-                                            <div class="card-item-bottom_link">
-                                                <a href="#">abc.com</a>
-                                            </div>
-                                            <div class="card-item-bottom_action">
-                                                <span class="card-item-bottom_action-item rounded-circle">
-                                                    <i class="fas fa-share-alt-square"></i>
-                                                </span>
-                                                <span class="card-item-bottom_action-item rounded-circle">
-                                                    <i class="far fa-flag"></i>
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="card-footer card-museum-footer">
-                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
-                                    <div class="card-footer__bottom d-flex justify-content-between">
-                                        <div class="pr-2 user-card d-flex align-items-center">
-                                            <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt="">
-                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
-                                        </div>
-                                        <div class="user-like d-flex align-items-center">
-                                            <!-- <i class="fas fa-heart pr-1 user-like_icon user-like__liked"></i> -->
-                                            <i class="far fa-heart pr-1 user-like_icon user-like__unlike"></i>
-                                            <span class="user-like__amount-like">10</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
 
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
@@ -353,23 +302,23 @@
                                     <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
                                     <div class="card-footer__bottom d-flex justify-content-between">
                                         <div class="pr-2 user-card d-flex align-items-center">
-                                            <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt="">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
                                             <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
                                         </div>
                                         <div class="user-like d-flex align-items-center">
-                                            <!-- <i class="fas fa-heart pr-1 user-like_icon user-like__liked"></i> -->
-                                            <i class="far fa-heart pr-1 user-like_icon user-like__unlike"></i>
-                                            <span class="user-like__amount-like">10</span>
+                                            <i class="fas fa-heart pr-1 user-like_icon user-like__liked show"></i>
+                                            <span class="user-like__amount-like">100</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-sm-12 col-md-6 col-lg-3">
+
                             <div class="card card-pin shadow-lg card-lg">
                                 <div class="card-img">
-                                    <img class="card-img" src="assets/image/image-item-test/item-15.jpg" alt="Card image">
+                                    <img class="card-img" src="assets/image/image-item-test/item-1.jpg" alt="Card image">
                                     <div class="img-overlay">
                                         <div class="d-flex card-item-top">
                                             <div class="card-item-top__category-item">
@@ -400,13 +349,59 @@
                                     <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
                                     <div class="card-footer__bottom d-flex justify-content-between">
                                         <div class="pr-2 user-card d-flex align-items-center">
-                                            <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt="">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
                                             <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
                                         </div>
                                         <div class="user-like d-flex align-items-center">
-                                            <!-- <i class="fas fa-heart pr-1 user-like_icon user-like__liked"></i> -->
-                                            <i class="far fa-heart pr-1 user-like_icon user-like__unlike"></i>
-                                            <span class="user-like__amount-like">10</span>
+                                            <i class="fas fa-heart pr-1 user-like_icon user-like__liked show"></i>
+                                            <span class="user-like__amount-like">100</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3">
+                            <div class="card card-pin shadow-lg card-lg">
+                                <div class="card-img">
+                                    <img class="card-img" src="assets/image/image-item-test/item-1.jpg" alt="Card image">
+                                    <div class="img-overlay">
+                                        <div class="d-flex card-item-top">
+                                            <div class="card-item-top__category-item">
+                                                <span class="category-item__category-name">Cổ vật</span>
+                                                <i class="ti-angle-double-down category-item__category-icon"></i>
+                                            </div>
+                                            <div class="card-item-top__save-card">
+                                                <button class="btn-musesum btn-musesum--primary-save"><span>Lưu</span></button>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex card-item-bottom">
+                                            <div class="card-item-bottom_link">
+                                                <a href="#">abc.com</a>
+                                            </div>
+                                            <div class="card-item-bottom_action">
+                                                <span class="card-item-bottom_action-item rounded-circle">
+                                                    <i class="fas fa-share-alt-square"></i>
+                                                </span>
+                                                <span class="card-item-bottom_action-item rounded-circle">
+                                                    <i class="far fa-flag"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đây là tên của hiện vật nó rất là dài nên cho hiện thị 2 dòng thôi</h5>
+                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
+                                        </div>
+                                        <div class="user-like d-flex align-items-center">
+                                            <i class="fas fa-heart pr-1 user-like_icon user-like__liked show"></i>
+                                            <span class="user-like__amount-like">100</span>
                                         </div>
                                     </div>
                                 </div>
@@ -428,16 +423,35 @@
                     </div>
 
                     <div class="toast guide__show" data-autohide="false" id="toast-show-guide">
-                        <div class="toast-header">
+                        <div class="toast-header" id="header-guide-show">
                             <strong class="mr-auto guide__show-title">Đến trung tâm trợ giúp</strong>
 
-                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast">&times;</button>
+                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" id="btn-close-guide">&times;</button>
                         </div>
-                        <div class="toast-body">
+                        <div class="toast-body guide__show-content">
                             <ul class="guide__show-list-content">
                                 <li class="guide__show-content-item"><a href="">Thông tin</a></li>
                                 <li class="guide__show-content-item"><a href="">Thông tin</a></li>
                                 <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
+                                <li class="guide__show-content-item"><a href="">Thông aaaaaaaaaaaaaaaaaaatin</a></li>
+
+
+
+
 
                             </ul>
                         </div>
@@ -453,42 +467,19 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-
+    <script src="./assets/js/main.js"></script>
     <script src="./assets/js/navbar-category.js"></script>
+
 
     <script>
         // show guide
-        $(document).ready(function() {
-            $toastShow = $('#toast-show-guide');
-            $("#guide_image-bg-1").click(
-                function() {
-                    console.log($toastShow.attr("data-autohide"));
-                    if ($toastShow.attr("data-autohide") == 'false' &&
-                        !$toastShow.hasClass('hide') && !$toastShow.hasClass('show')) {
-                        $('#toast-show-guide').toast("show");
-                        console.log("show 1");
-                    } else if ($toastShow.hasClass('hide')) {
-                        $('#toast-show-guide').toast("show");
-                        console.log("show 2");
-
-                    } else {
-                        $('#toast-show-guide').toast("hide");
-                        console.log("show 3");
-
-                    }
-                }
-            )
-
-        });
     </script>
 
 </body>
