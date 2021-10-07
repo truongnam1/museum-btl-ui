@@ -52,6 +52,7 @@
 .modal-topic_content-button_save span {
   margin-left: 22%;
   font-size: 17px;
+  text-decoration: underline;
 }
 .modal-topic_content-header {
   display: flex;
@@ -63,6 +64,7 @@
   border-radius: 40%;
   width: 25%;
   border: none;
+  color: white;
 }
 .modal-topic_content-header1 h1 {
   font-size: 19px;
@@ -70,6 +72,9 @@
 }
 .modal-topic_content-header1 {
   padding-top: 25px;
+}
+.modal-topic_content-header1 i span {
+  font-size: 9px;
 }
 .modal-img_group img {
   object-fit: cover;
