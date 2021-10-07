@@ -1,0 +1,95 @@
+#navbar-category {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+#navbar-category:hover .nav-control__next,
+#navbar-category:hover .nav-control__prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav-control__next,
+.nav-control__prev {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    display: block;
+    /* top: 0; */
+    z-index: 999;
+    /* padding: 2px; */
+    color: rgb(228, 6, 6);
+    text-decoration: none;
+    opacity: 0.8;
+    cursor: pointer;
+    font-size: 1rem;
+    display: none;
+    animation: fadeInControl ease-in 0.3s;
+    border-radius: 50%;
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+.nav-control__prev {
+    background-color: rgba(0, 0, 0, 0.342);
+    /* border-radius: 0px 0 0 40px; */
+}
+
+.nav-control__next {
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.342);
+}
+
+.nav-control__prev:hover,
+.nav-control__next:hover {
+    background-color: rgba(0, 0, 0, 0.542);
+}
+
+
+/*  */
+
+#navbar-category ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    /* height: 200px; */
+    list-style: none;
+}
+
+#navbar-category ul li {
+    position: relative;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    -webkit-transition: linear 0.2s ease;
+}
+
+.nav-item-category {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@keyframes fadeInSlide {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInControl {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 0.8;
+    }
+}

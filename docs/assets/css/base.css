@@ -23,6 +23,24 @@ body {
 }
 
 
+/* search form */
+
+#header-search-form {
+    border-color: transparent;
+    border-radius: 10px;
+    filter: brightness(98%);
+}
+
+#header-search-form:hover {
+    transition: border 0.3s ease-in-out;
+    border: 1px solid rgb(209, 209, 209);
+}
+
+#search-input {
+    outline: none;
+}
+
+
 /* button */
 
 .btn-musesum {
@@ -35,6 +53,12 @@ body {
     justify-content: center;
     outline: none;
     border: none;
+    /* box-sizing: border-box; */
+    cursor: pointer;
+}
+
+.btn-musesum:hover {
+    filter: brightness(95%);
 }
 
 .btn-musesum.btn-musesum--primary {
@@ -54,8 +78,8 @@ body {
     min-width: 60px;
     background-color: var(--musesum-bg-btn-save);
     padding: 0 10px;
-    /* outline: none;
-    border: none; */
+    outline: none;
+    border: none;
 }
 
 
@@ -64,8 +88,8 @@ body {
 .guide {
     /* position: relative; */
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: #fff;
     /* right: 10px;
     bottom: 10px; */
@@ -78,10 +102,82 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .guide_image-bg-icon {
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+
+/* guide show */
+
+.guide__show {
+    --width-guide-show: 300px;
+    position: relative;
+    width: var(--width-guide-show);
+    max-height: 150px;
+    bottom: 150px;
+    right: calc(var(--width-guide-show) + 10px);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.guide__show::-webkit-scrollbar {
+    width: 5px;
+}
+
+.guide__show::-webkit-scrollbar-thumb {
+    background: rgb(211, 211, 211);
+    border-radius: 5px;
+}
+
+#header-guide-show {
+    position: relative;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.356);
+}
+
+#btn-close-guide {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    outline: none;
+}
+
+.guide__show-title {
+    color: var(--musesum-text-color-black);
+    font-size: 1.1rem;
+}
+
+.guide__show-content {
+    padding: 0;
+}
+
+.guide__show-list-content {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.guide__show-content-item {
+    margin: 0 2px;
+    border-radius: 4px;
+    padding: 2px 5px;
+    background-color: rgb(245, 244, 244);
+}
+
+.guide__show-content-item:hover {
+    filter: brightness(96%);
+    transform: scale(1.05);
+}
+
+.guide__show-content-item>a {
+    color: var(--musesum-text-color-black);
+    text-decoration: none;
 }
 
 

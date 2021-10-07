@@ -6,9 +6,26 @@
 }
 
 
-/* .card-shadow {
-    shadow : 
-} */
+/* overlay */
+
+div.card-img {}
+
+div.card-img:hover .img-overlay {
+    display: block;
+}
+
+.img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.28);
+    display: none;
+    animation: fadeInOverlay ease 1s;
+}
+
+
+/* card footer */
 
 .card-museum-footer {
     padding-left: 10px;
@@ -28,23 +45,47 @@
 .museum-card-img {}
 
 .user-card__avata-user {
-    height: 35px;
-    width: 80px;
-    /* border: 1px solid black; */
+    width: 40px;
+    height: 40px;
+    padding-left: 40px;
+    background-image: url(https://i.ibb.co/0Ywq6vK/Bot-avt.png);
     background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* object-fit: contain; */
 }
 
 .user-card__avata-image {
     height: 35px;
+    margin: 0 auto;
 }
 
 .user-card__name-user {
     font-size: 0.9rem;
+    font-weight: 500;
     overflow: hidden;
     display: block;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
+}
+
+.user-like {
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+
+.user-like_icon {
+    font-size: 0.84rem;
+    margin-top: 3px;
+    cursor: pointer;
+    display: none;
+    color: red;
+}
+
+.user-like_icon.show {
+    display: block;
 }
 
 
@@ -105,6 +146,7 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .card-item-bottom_action-item>i {
@@ -128,5 +170,16 @@
     }
     to {
         background-color: rgba(240, 248, 255, 0.3);
+    }
+}
+
+@keyframes fadeInOverlay {
+    from {
+        background-color: rgba(0, 0, 0, 0.1);
+        opacity: 0.5;
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.28);
+        opacity: 1;
     }
 }
