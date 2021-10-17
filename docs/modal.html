@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="assets/css/base.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://okfoc.us/okzoom/src/okzoom-1.0.min.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     
 </head>
 <body>
@@ -32,7 +33,8 @@
                 <div class="row modal-topic_body">
                     <!-- <div class="col-xl-12"> -->
                         <div class="col-xl-6 modal-topic_img">
-                            <img src="https://image.thanhnien.vn/1024/uploaded/ngocthanh/2015_05_16/hinh-bac_edhw.jpg" alt="" class="modal-topic_img-image">
+                            <!-- <img src="https://image.thanhnien.vn/1024/uploaded/ngocthanh/2015_05_16/hinh-bac_edhw.jpg" alt="" class="modal-topic_img-image"> -->
+                            <model-viewer alt="" src="assets/image/scene.gltf" seamless-poster shadow-intensity="1" camera-controls class="model_viewer"></model-viewer>
                         </div>
                         <div class="col-xl-6 modal-topic_content" >
                             <div class="row">
