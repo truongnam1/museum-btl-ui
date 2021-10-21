@@ -62,7 +62,7 @@ window.DataMuseum = (function() {
 
             arrCols[indexItem % 4] += html;
         }
-        console.log(arrCols);
+        // console.log(arrCols);
         // console.log(cols);
         cols.col1.innerHTML = arrCols[0];
         cols.col2.innerHTML = arrCols[1];
@@ -87,7 +87,7 @@ window.DataMuseum = (function() {
                                 <div class="modal-topic">
                                 <div class="row modal-topic_body">
                                         <div class="col-xl-6 modal-topic_img">
-                                        <img src="${item["url_full"]}" class="modal-topic_img-image"/>
+                                            <img src="${item["url_full"]}" class="modal-topic_img-image"/>
                                             <!--<model-viewer alt="" src="assets/image/scene.gltf" seamless-poster shadow-intensity="1" camera-controls class="model_viewer"></model-viewer> -->
                                         </div>
                                         

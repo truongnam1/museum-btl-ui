@@ -10,5 +10,8 @@ $(document).ready(function(){
         shadow: "0 0 5px #000",
         border: "1px solid black"
         });
+
+        console.log(12);
 })
+
 
