@@ -13,10 +13,15 @@ window.DataMuseum = (function() {
 
         for (const indexItem in data) {
             // console.log(data[indexItem]);
+            let choiceURLFull ="";
+            let urlFoot = data[indexItem]["url_full"].split('.')[2];
+            if(urlFoot == "png" || url == "jpeg") choiceURLFull = `<img src="${data[indexItem]["url_full"]}" class="card-img" alt="Card image"/>`
+            else choiceURLFull = `<model-viewer alt="" src="${data[indexItem]["url_full"]}" seamless-poster shadow-intensity="1" camera-controls class="model_viewer"></model-viewer>`
+            
             var html = `
             <div class="card card-pin shadow-lg card-lg" index-data="${indexItem}"  onclick="clickCard(${indexItem})" data-toggle="modal" data-target="#myModal">
                                 <div class="card-img">
-                                    <img class="card-img" src="${data[indexItem]["url_full"]}" alt="Card image">
+                                    ${choiceURLFull}
                                     <div class="img-overlay">
                                         <div class="d-flex card-item-top">
                                             <div class="card-item-top__category-item">
@@ -73,6 +78,10 @@ window.DataMuseum = (function() {
 
     this.renderItemHTMLModal = function(modal, idItem, data) {
         var item = data[idItem];
+        let choiceURLFull ="";
+       let urlFoot = item["url_full"].split('.')[2];
+       if(urlFoot == "png" || url == "jpeg") choiceURLFull = `<img src="${item["url_full"]}" class="modal-topic_img-image"/>`
+       else choiceURLFull = `<model-viewer alt="" src="${item["url_full"]}" seamless-poster shadow-intensity="1" camera-controls class="model_viewer"></model-viewer>`
         let html = `
         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
@@ -87,8 +96,7 @@ window.DataMuseum = (function() {
                                 <div class="modal-topic">
                                 <div class="row modal-topic_body">
                                         <div class="col-xl-6 modal-topic_img">
-                                            <img src="${item["url_full"]}" class="modal-topic_img-image"/>
-                                            <!--<model-viewer alt="" src="assets/image/scene.gltf" seamless-poster shadow-intensity="1" camera-controls class="model_viewer"></model-viewer> -->
+                                           ${choiceURLFull}
                                         </div>
                                         
                                         <div class="col-xl-6 modal-topic_content" >
