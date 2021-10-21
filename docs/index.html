@@ -401,6 +401,14 @@
                 shadow: "0 0 5px #000",
                 border: "1px solid black"
             });
+
+            $('video').each(function(){
+            if ($(this).is(":in-viewport")) {
+                $(this)[0].pause();
+            } else {
+                $(this)[0].play();
+            }
+        })
         }
 
         function clickControlSlide(control) {
