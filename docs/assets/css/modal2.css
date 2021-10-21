@@ -1,0 +1,33 @@
+#main-myModal {
+    position: relative;
+}
+
+.control-slide {
+    position: absolute;
+    top: 50vh;
+    color: rgb(180, 180, 180);
+    font-size: 1.4rem;
+    cursor: pointer;
+    z-index: 2000;
+    pointer-events: auto;
+}
+
+.control-slide:hover {
+    /* filter: brightness(120%); */
+    /* color: rgb(241, 241, 241); */
+    color: rgba(243, 243, 243, 0.856);
+}
+
+.control-slide--previous {
+    --length: 16px;
+    left: calc(var(--length) * -1 - 24px);
+    /* top: 0; */
+    padding: var(--length);
+}
+
+.control-slide--next {
+    --length: 16px;
+    /* top: 0; */
+    right: calc(var(--length) * -1 - 24px);
+    padding: var(--length);
+}

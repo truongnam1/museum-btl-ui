@@ -83,7 +83,7 @@ window.DataMuseum = (function() {
        if(urlFoot == "png" || urlFoot == "jpeg") choiceURLFull = `<img src="${item["url_full"]}" class="modal-topic_img-image"/>`
        else choiceURLFull = `<model-viewer alt="" src="${item["url_full"]}" seamless-poster shadow-intensity="1" camera-controls class="model_viewer"></model-viewer>`
         let html = `
-        <div class="modal-dialog modal-lg">
+        <div class="modal-dialog modal-lg" id="main-myModal" index-data="${idItem}">
                             <div class="modal-content">
                                 <!-- Modal Header -->
                                 <div class="modal-header">
@@ -145,6 +145,8 @@ window.DataMuseum = (function() {
                                 </div>
 
                             </div>
+                            <div class="control-slide control-slide--previous" onclick="clickControlSlide('pre')" ><i class="fas fa-chevron-left"></i></div>
+                            <div class="control-slide control-slide--next" onclick="clickControlSlide('next')"><i class="fas fa-chevron-right"></i></div>
                         </div>
         `;
         // let html = `
@@ -153,9 +155,40 @@ window.DataMuseum = (function() {
         modal.innerHTML = html;
     }
 
+    this.controlSlideItem = function(modal, indexCurrent, data, control) {
+        var lengthArr = data.length;
+        console.log("control slide");
+        // console.log(data);
+        console.log("indexCurrent: " + indexCurrent);
+        // console.log("control: " + control);
+
+        if (control == "next" && data) {
+            var indexNext;
+            if (indexCurrent != 0) {
+                indexNext = (indexCurrent + 1) % lengthArr;
+            } else {
+                indexNext = 1;
+            }
+
+            this.renderItemHTMLModal(modal, indexNext, data);
+        } else if (control == "pre" && data) {
+            var indexPre;
+
+            if (indexCurrent != 0) {
+                indexPre = (indexCurrent - 1) % lengthArr;
+            } else {
+                indexPre = lengthArr - 1;
+            }
+
+            this.renderItemHTMLModal(modal, indexPre, data);
+
+        }
+    }
+
     return {
         test: test,
         renderItemHTMLCard: renderItemHTMLCard,
-        renderItemHTMLModal: renderItemHTMLModal
+        renderItemHTMLModal: renderItemHTMLModal,
+        controlSlideItem: controlSlideItem
     }
 }());

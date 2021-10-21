@@ -32,7 +32,11 @@
     <!-- modal -->
     <link rel="stylesheet" href="assets//css//compoment//modal.css">
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    
+
+    <link rel="stylesheet" href="./assets/css/modal2.css">
+
+
+
 </head>
 
 <body>
@@ -211,7 +215,7 @@
 
                     <!-- The Modal -->
                     <div class="modal" id="myModal">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog" id="main-myModal" index-data="1">
                             <div class="modal-content">
                                 <!-- bắt đầu sửa modal từ trong này....................... -->
 
@@ -243,8 +247,8 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    
-    
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="http://okfoc.us/okzoom/src/okzoom-1.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -365,15 +369,31 @@
             console.log('click card ' + idItem);
             DataMuseum.renderItemHTMLModal(modal, idItem, arrItem.images);
             $('.modal-topic_img-image').okzoom({
-            width: 200,
-            height: 200,
-            scaleWidth: 800,
-            round: true,
-            background: "#fff",
-            // backgroundRepeat: "repeat",
-            shadow: "0 0 5px #000",
-            border: "1px solid black"
-    });
+                width: 200,
+                height: 200,
+                scaleWidth: 800,
+                round: true,
+                background: "#fff",
+                // backgroundRepeat: "repeat",
+                shadow: "0 0 5px #000",
+                border: "1px solid black"
+            });
+        }
+
+        function clickControlSlide(control) {
+            var index = parseInt($("#main-myModal").attr("index-data"));
+            if (arrItem && arrItem.images.length > 1 && isNumber(index)) {
+                console.log("click control\n" + "index : " + index);
+                console.log("control:" + control);
+                DataMuseum.controlSlideItem(modal, index, arrItem.images, control);
+            } else {
+                console.log("loi j do ve control");
+            }
+
+        }
+
+        var isNumber = function isNumber(value) {
+            return typeof value === 'number' && isFinite(value);
         }
     </script>
 
