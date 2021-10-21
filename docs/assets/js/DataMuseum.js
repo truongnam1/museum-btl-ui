@@ -16,8 +16,14 @@ window.DataMuseum = (function() {
             let choiceURLFull ="";
             let urlFoot = data[indexItem]["url_full"].split('.')[2];
             if(urlFoot == "png" || urlFoot == "jpeg") choiceURLFull = `<img src="${data[indexItem]["url_full"]}" class="card-img" alt="Card image"/>`
-            else choiceURLFull = `<model-viewer alt="" src="${data[indexItem]["url_full"]}" seamless-poster shadow-intensity="1" camera-controls  class="card-img"></model-viewer>`
-            console.log(choiceURLFull);
+            else if(urlFoot == "gltf"){
+                choiceURLFull = `<model-viewer alt="" src="${data[indexItem]["url_full"]}" seamless-poster shadow-intensity="1" camera-controls  class="card-img"></model-viewer>`
+            } else {
+                choiceURLFull = `
+                <video preload="none" autoplay loop class="card-img">
+                    <source src="${data[indexItem]["url_full"]}" type="video/mp4">
+                </video>`
+            }
             var html = `
             <div class="card card-pin shadow-lg card-lg" index-data="${indexItem}"  onclick="clickCard(${indexItem})" data-toggle="modal" data-target="#myModal">
                                 <div class="card-img">

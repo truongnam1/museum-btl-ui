@@ -27,18 +27,15 @@ $(document).ready(function() {
     //     $iconElement = $(index.target);
     //     $iconElement.toggleClass(["fas", "far", "user-like__liked", "user-like__unlike"]);
     // });
-    let rs = $('.modal-topic_img-image');
-    console.log(rs  );
-    $('.modal-topic_img-image').okzoom({
-        width: 200,
-        height: 200,
-        scaleWidth: 800,
-        round: true,
-        background: "#fff",
-        // backgroundRepeat: "repeat",
-        shadow: "0 0 5px #000",
-        border: "1px solid black"
-    });
+    $( window ).scroll(function() {
+        $('video').each(function(){
+            if ($(this).is(":in-viewport")) {
+                $(this)[0].play();
+            } else {
+                $(this)[0].pause();
+            }
+        })
+    })
 
 });
 
