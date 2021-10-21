@@ -4,6 +4,7 @@
     --musesum-bg-btn-active: #EFD279;
     --musesum-text-color-black: rgb(0, 0, 0);
     --musesum-bg-btn-save: #F2A447;
+    --musesum-bg-btn-primary: #F2A447;
     --musesum-text-color-white: rgb(255, 255, 255);
 }
 
@@ -80,6 +81,17 @@ body {
     padding: 0 10px;
     outline: none;
     border: none;
+}
+
+.btn-musesum.btn-musesum--primary {
+    color: #fff;
+    font-weight: 500;
+    min-width: 50px;
+    background-color: var(--musesum-bg-btn-primary);
+    padding: 0 10px;
+    outline: none;
+    border: none;
+    font-size: 0.9rem;
 }
 
 

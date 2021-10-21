@@ -1,5 +1,6 @@
 #main-myModal {
     position: relative;
+    min-height: 60vh;
 }
 
 .control-slide {
@@ -30,4 +31,50 @@
     /* top: 0; */
     right: calc(var(--length) * -1 - 24px);
     padding: var(--length);
+}
+
+
+/* dddddddddddddddddddddddd */
+
+.modal-content-custom {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    background-color: rgb(234 251 251);
+}
+
+.modal-content-custom>div {
+    margin: 0;
+}
+
+.modal-content-custom-media {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.modal-content-custom-media img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.modal-content-custom-text {
+    /* padding: 20px; */
+}
+
+.modal-header-custom {
+    padding: 10px 20px 0 10px;
+}
+
+.modal-body-custom {
+    padding: 10px 20px 0 10px;
+}
+
+.item-action {}
+
+.item-action__item {
+    color: var(--musesum-text-color-black);
+    margin-right: 4px;
+}
+
+.title-text {
+    font-size: 1.3rem;
 }
