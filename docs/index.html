@@ -15,6 +15,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"> />
 
     <!-- themefy icon -->
@@ -31,9 +32,10 @@
 
     <!-- modal -->
     <link rel="stylesheet" href="assets//css//compoment//modal.css">
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
     <link rel="stylesheet" href="./assets/css/modal2.css">
+
+    <!-- zoom2 -->
+    <link rel="stylesheet" href="./assets/css/compoment/zoom.css">
 
 
 
@@ -127,7 +129,10 @@
                                     <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
                                 </li>
                                 <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
+                                    <a class="nav-link mx-auto" href="#">Vua Hùng</a>
+                                </li>
+                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
+                                    <a class="nav-link mx-auto" href="#">Nhà Triệu</a>
                                 </li>
 
                             </ul>
@@ -245,7 +250,8 @@
 
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://okfoc.us/okzoom/src/okzoom-1.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -257,9 +263,13 @@
     <script src="https://cdnout.com/is-in-viewport"></script>
 
     <!-- modal -->
-    <script src="http://okfoc.us/okzoom/src/okzoom-1.0.min.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="http://okfoc.us/okzoom/src/okzoom-1.0.min.js"></script>
     <script src="./assets/js/modal.js"></script>
+
+    <!-- zoom2 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/2.0.2/js/bootstrap-transition.js"></script>
+    <script src="./assets/js/zoom2.js"></script>
 
     <!-- đoạn script này sẽ do php render từ data trealet ra -->
     <script>
@@ -367,6 +377,7 @@
                 "path": "Nhom08/data2/1.jpg",
                 "title": "1",
                 "date": 1634837688,
+                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
                 "url_full": "https://trealet.com/albums/Nhom08/data2/1.jpg",
                 "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=1.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
                 "url_thumb": "/cache/Nhom08/data2/1_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837793",
@@ -375,6 +386,8 @@
                 "index": 1
             }, {
                 "path": "Nhom08/data2/2.jpg",
+                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+
                 "title": "2",
                 "date": 1634837688,
                 "url_full": "https://trealet.com/albums/Nhom08/data2/2.jpg",
@@ -385,6 +398,8 @@
                 "index": 3
             }, {
                 "path": "Nhom08/data2/3.jpg",
+                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+
                 "title": "3",
                 "date": 1634837688,
                 "url_full": "https://trealet.com/albums/Nhom08/data2/3.jpg",
@@ -394,17 +409,9 @@
                 "height": 1350,
                 "index": 5
             }, {
-                "path": "Nhom08/data2/4_1634837751.jpg",
-                "title": "4",
-                "date": 1634837751,
-                "url_full": "https://trealet.com/albums/Nhom08/data2/4_1634837751.jpg",
-                "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=4_1634837751.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/data2/4_1634837751_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837793",
-                "width": 1080,
-                "height": 1157,
-                "index": 6
-            }, {
                 "path": "Nhom08/data2/4.jpg",
+                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+
                 "title": "4",
                 "date": 1634837688,
                 "url_full": "https://trealet.com/albums/Nhom08/data2/4.jpg",
@@ -415,6 +422,8 @@
                 "index": 7
             }, {
                 "path": "Nhom08/data2/5.jpg",
+                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+
                 "title": "5",
                 "date": 1634837688,
                 "url_full": "https://trealet.com/albums/Nhom08/data2/5.jpg",
@@ -425,6 +434,8 @@
                 "index": 8
             }, {
                 "path": "Nhom08/data2/6.jpg",
+                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+
                 "title": "6",
                 "date": 1634837688,
                 "url_full": "https://trealet.com/albums/Nhom08/data2/6.jpg",
@@ -435,6 +446,8 @@
                 "index": 9
             }, {
                 "path": "Nhom08/data2/7.jpg",
+                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+
                 "title": "7",
                 "date": 1634837688,
                 "url_full": "https://trealet.com/albums/Nhom08/data2/7.jpg",
@@ -445,6 +458,8 @@
                 "index": 10
             }, {
                 "path": "Nhom08/data2/8.jpg",
+                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+
                 "title": "8",
                 "date": 1634837688,
                 "url_full": "https://trealet.com/albums/Nhom08/data2/8.jpg",
@@ -455,6 +470,7 @@
                 "index": 11
             }, {
                 "path": "Nhom08/data2/9.jpg",
+                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân \ntộc.",
                 "title": "9",
                 "date": 1634837688,
                 "url_full": "https://trealet.com/albums/Nhom08/data2/9.jpg",
@@ -465,6 +481,8 @@
                 "index": 12
             }, {
                 "path": "Nhom08/data2/10.jpg",
+                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+
                 "title": "10",
                 "date": 1634837688,
                 "url_full": "https://trealet.com/albums/Nhom08/data2/10.jpg",
@@ -559,7 +577,6 @@
                     console.log("trái");
 
                 }
-
             }
             console.log(e);
         }

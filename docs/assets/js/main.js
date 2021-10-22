@@ -27,15 +27,19 @@ $(document).ready(function() {
     //     $iconElement = $(index.target);
     //     $iconElement.toggleClass(["fas", "far", "user-like__liked", "user-like__unlike"]);
     // });
-    $( window ).scroll(function() {
-        $('video').each(function(){
+    $(window).scroll(function() {
+        $('video').each(function() {
             if ($(this).is(":in-viewport")) {
-                $(this)[0].play();
+                this.play();
             } else {
-                $(this)[0].pause();
+                this.pause();
             }
         })
     })
+    $("body video").each(function() {
+        this.muted = true;
+    })
+
+
 
 });
-

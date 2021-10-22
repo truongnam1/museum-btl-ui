@@ -62,11 +62,6 @@ body {
     filter: brightness(95%);
 }
 
-.btn-musesum.btn-musesum--primary {
-    color: var(--musesum-text-color-black);
-    background-color: var(--musesum-bg-btn);
-}
-
 .btn-musesum.btn-musesum--primary-active {
     font-weight: 400;
     color: var(--musesum-text-color-black);
@@ -84,10 +79,10 @@ body {
 }
 
 .btn-musesum.btn-musesum--primary {
-    color: #fff;
+    color: var(--musesum-text-color-black);
+    background-color: var(--musesum-bg-btn);
     font-weight: 500;
     min-width: 50px;
-    background-color: var(--musesum-bg-btn-primary);
     padding: 0 10px;
     outline: none;
     border: none;

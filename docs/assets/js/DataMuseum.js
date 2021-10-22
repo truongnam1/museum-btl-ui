@@ -87,19 +87,19 @@ window.DataMuseum = (function() {
 
         let choiceURLFull = "";
         let urlFoot = item["url_full"].split('.')[2];
-        if (urlFoot == "png" || urlFoot == "jpeg" || urlFoot == "jpg") choiceURLFull = `<img src="${item["url_full"]}" class="modal-topic_img-image"/>`
+        if (urlFoot == "png" || urlFoot == "jpeg" || urlFoot == "jpg") choiceURLFull = `<img src="${item["url_full"]}" class="modal-topic_img-image" data-action="zoom" />`
         else if (urlFoot == "gltf") {
-            choiceURLFull = `<model-viewer alt="" src="${item["url_full"]}" seamless-poster shadow-intensity="1" camera-controls class="model_viewer"></model-viewer>`
+            choiceURLFull = `<model-viewer alt="" src="${item["url_full"]}" seamless-poster shadow-intensity="1" camera-controls class="model_viewer modal-topic_img-image"></model-viewer>`
         } else {
             choiceURLFull = `
-        <video preload="none" autoplay loop class="modal-topic_img-image">
+        <video controls class="modal-topic_img-image">
             <source src="${item["url_full"]}" type="video/mp4">
         </video>
         `
         }
         let html = `
 
-        <div class="modal-dialog modal-lg" id="main-myModal" index-data="${idItem}">
+        <div class="modal-dialog modal-lg modal-dialog-centered" id="main-myModal" index-data="${idItem}">
         <div class="modal-content modal-content-custom">
         <!-- bắt đầu sửa modal từ trong này....................... -->
 
@@ -139,7 +139,7 @@ window.DataMuseum = (function() {
                                 <span class="user-like__amount-like">100</span>
                             </div>
                         </div>
-                        <h3 class="title-text">Chủ Tịch Hồ Chí Minh</h3>
+                        <h3 class="title-text">${item["title"]}</h3>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="pr-2 user-card d-flex align-items-center">
                                 <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
@@ -152,7 +152,7 @@ window.DataMuseum = (function() {
                 </div>
                 <div class="modal-body-custom">
                     <p class="text-content">
-                        Hồ Chí Minh (Chữ Nho: 胡志明; 19 tháng 5 năm 1890 – 2 tháng 9 năm 1969)
+                    ${item["desc"]}
                     </p>
 
                 </div>
@@ -199,6 +199,13 @@ window.DataMuseum = (function() {
 
         }
     }
+
+    // function checkType(url) {
+    //     let arrPathUrl = url.split('.')[2];
+    //     if (arrPathUrl[]) {
+
+    //     }
+    // }
 
     return {
         test: test,

@@ -5,7 +5,7 @@
 
 .control-slide {
     position: absolute;
-    top: 50vh;
+    top: 40vh;
     color: rgb(180, 180, 180);
     font-size: 1.4rem;
     cursor: pointer;
@@ -49,11 +49,15 @@
 .modal-content-custom-media {
     padding-left: 10px;
     padding-top: 10px;
+    min-height: 90vh;
 }
 
-.modal-content-custom-media img {
+.modal-content-custom-media img {}
+
+.modal-topic_img-image {
     border-radius: 10px;
-    width: 100%;
+    max-width: 100%;
+    box-shadow: 3px 3px 2px #dee2e6, 0em -2px 0em 0px #dee2e6;
 }
 
 .modal-content-custom-text {
@@ -77,4 +81,8 @@
 
 .title-text {
     font-size: 1.3rem;
+}
+
+.text-content {
+    color: var(--musesum-text-color-black);
 }
