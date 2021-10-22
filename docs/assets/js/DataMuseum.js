@@ -13,17 +13,8 @@ window.DataMuseum = (function() {
 
         for (const indexItem in data) {
             // console.log(data[indexItem]);
-            let choiceURLFull = "";
-            let urlFoot = data[indexItem]["url_full"].split('.')[2];
-            if (urlFoot == "png" || urlFoot == "jpeg" || urlFoot == "jpg") choiceURLFull = `<img src="${data[indexItem]["url_full"]}" class="card-img" alt="Card image"/>`
-            else if (urlFoot == "gltf") {
-                choiceURLFull = `<model-viewer alt="" src="${data[indexItem]["url_full"]}" seamless-poster shadow-intensity="1" camera-controls  class="card-img"></model-viewer>`
-            } else {
-                choiceURLFull = `
-                <video autoplay loop class="card-img">
-                    <source src="${data[indexItem]["url_full"]}" type="video/mp4">
-                </video>`
-            }
+            let choiceURLFull = extUrl(data[indexItem]["url_full"], "card");
+
             var html = `
             <div class="card card-pin shadow-lg card-lg" index-data="${indexItem}"  onclick="clickCard(${indexItem})" data-toggle="modal" data-target="#myModal">
                                 <div class="card-img">
@@ -82,21 +73,89 @@ window.DataMuseum = (function() {
 
     }
 
+    function extUrl(url, code = "card") {
+        let sUrl = url.split('.');
+        let ext = sUrl[sUrl.length - 1].toUpperCase();
+        var html = "";
+
+        if (ext == 'GIF' || ext == 'JPEG' || ext == 'JPG' || ext == 'PNG' || ext == 'TIF' || ext == 'TIFF') {
+
+            switch (code) {
+                case 'card':
+                    html = `<img src="${url}" class="card-img" alt="Card image"/>`;
+                    break;
+                case 'modal':
+                    html = `
+                    <img src="${url}" class="modal-topic_img-image" data-action="zoom" />
+                            `;
+                    break;
+                default:
+                    break;
+            }
+        } else if (ext == "MP4") {
+            switch (code) {
+                case 'card':
+                    html = `
+                    <video autoplay loop class="card-img">
+                        <source src="${url}" type="video/mp4">
+                    </video>
+                    `;
+                    break;
+                case 'modal':
+                    html = `
+                        <video controls >
+                        <source src="${url}" type="video/mp4">
+                    </video>
+                            `;
+                    break;
+                default:
+                    break;
+            }
+        } else if (ext == "YTB") {
+            let arrPath = url.split('/');
+            let nameYTB = arrPath[arrPath.length - 1].split(".");
+            // console.log("nameYTB: ");
+            // console.log(nameYTB);
+            let idYTB = nameYTB[0];
+            switch (code) {
+                case 'card':
+                    html = `
+                    <iframe id="cardYTB-${idYTB}" class="mw-100" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/${idYTB}?mute=1&autoplay=1&controls=0&showinfo=0&modestbranding=1&loop=1&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=0&enablejsapi=1&widgetid=1"></iframe>
+                    `;
+                    break;
+                case 'modal':
+                    html = `
+                    <iframe id="modalYTB-${idYTB}" class="modal-topic_img-image" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="560" height="316" src="https://www.youtube.com/embed/${idYTB}?autoplay=0&controls=1&showinfo=1&modestbranding=1&loop=1&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=0&enablejsapi=1&widgetid=1"></iframe>
+                    `;
+                    break;
+                default:
+                    break;
+            }
+        } else if (ext == "GLTF") {
+            switch (code) {
+                case 'card':
+                    html = `
+                    <model-viewer alt="" src="${url}" seamless-poster shadow-intensity="1" camera-controls  class="card-img"></model-viewer>
+                    `;
+                    break;
+                case 'modal':
+                    html = `
+                    <model-viewer alt="" src="${url}" seamless-poster shadow-intensity="1" camera-controls class="model_viewer modal-topic_img-image"></model-viewer>
+                            `;
+                    break;
+                default:
+                    break;
+            }
+        }
+        return html;
+    }
+
+
     this.renderItemHTMLModal = function(modal, idItem, data) {
         var item = data[idItem];
-        console.log("thí is modal123");
-        let choiceURLFull = "";
-        let urlFoot = item["url_full"].split('.')[2];
-        if (urlFoot == "png" || urlFoot == "jpeg" || urlFoot == "jpg") choiceURLFull = `<img src="${item["url_full"]}" class="modal-topic_img-image" data-action="zoom" />`
-        else if (urlFoot == "gltf") {
-            choiceURLFull = `<model-viewer alt="" src="${item["url_full"]}" seamless-poster shadow-intensity="1" camera-controls class="model_viewer modal-topic_img-image"></model-viewer>`
-        } else {
-            choiceURLFull = `
-        <video controls >
-            <source src="${item["url_full"]}" type="video/mp4">
-        </video>
-        `
-        }
+        console.log("this is modal123");
+        let choiceURLFull = extUrl(item["url_full"], "modal");
+
         let html = `
 
         <div class="modal-dialog modal-lg modal-dialog-centered" id="main-myModal" index-data="${idItem}">

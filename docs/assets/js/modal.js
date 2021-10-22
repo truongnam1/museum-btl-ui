@@ -10,6 +10,4 @@ $(document).ready(function() {
         border: "1px solid black"
     });
 
-
-    // console.log(12);
 })

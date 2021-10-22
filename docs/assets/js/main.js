@@ -40,6 +40,17 @@ $(document).ready(function() {
         this.muted = true;
     })
 
+    // xoá data modal để tắt tiếng
+    document.onclick = function(e) {
+        if ($("#myModal").hasClass("modal") && !$("#myModal").hasClass("show")) {
+            console.log("modal mo");
+            document.querySelector("#main-myModal").innerHTML = "";
+        }
+    }
+
+
+
+
 
 
 });
