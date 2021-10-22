@@ -84,7 +84,7 @@ window.DataMuseum = (function() {
 
     this.renderItemHTMLModal = function(modal, idItem, data) {
         var item = data[idItem];
-        console.log("thí is modal");
+        console.log("thí is modal123");
         let choiceURLFull = "";
         let urlFoot = item["url_full"].split('.')[2];
         if (urlFoot == "png" || urlFoot == "jpeg" || urlFoot == "jpg") choiceURLFull = `<img src="${item["url_full"]}" class="modal-topic_img-image" data-action="zoom" />`
