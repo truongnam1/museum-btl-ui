@@ -20,7 +20,7 @@ window.DataMuseum = (function() {
                 choiceURLFull = `<model-viewer alt="" src="${data[indexItem]["url_full"]}" seamless-poster shadow-intensity="1" camera-controls  class="card-img"></model-viewer>`
             } else {
                 choiceURLFull = `
-                <video preload="none" autoplay loop class="card-img">
+                <video autoplay loop class="card-img">
                     <source src="${data[indexItem]["url_full"]}" type="video/mp4">
                 </video>`
             }
@@ -84,7 +84,7 @@ window.DataMuseum = (function() {
 
     this.renderItemHTMLModal = function(modal, idItem, data) {
         var item = data[idItem];
-
+        console.log("thí is modal");
         let choiceURLFull = "";
         let urlFoot = item["url_full"].split('.')[2];
         if (urlFoot == "png" || urlFoot == "jpeg" || urlFoot == "jpg") choiceURLFull = `<img src="${item["url_full"]}" class="modal-topic_img-image" data-action="zoom" />`
@@ -92,7 +92,7 @@ window.DataMuseum = (function() {
             choiceURLFull = `<model-viewer alt="" src="${item["url_full"]}" seamless-poster shadow-intensity="1" camera-controls class="model_viewer modal-topic_img-image"></model-viewer>`
         } else {
             choiceURLFull = `
-        <video controls class="modal-topic_img-image">
+        <video controls >
             <source src="${item["url_full"]}" type="video/mp4">
         </video>
         `
