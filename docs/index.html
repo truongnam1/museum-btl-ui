@@ -518,6 +518,8 @@
         }
 
         function clickControlSlide(control) {
+            // $('#ok-lorgnette').css()
+            $("#ok-lorgnette").css("display", "none");
             var index = parseInt($("#main-myModal").attr("index-data"));
             if (arrItem && arrItem.images.length > 1 && isNumber(index)) {
                 console.log("click control\n" + "index : " + index);
@@ -526,6 +528,7 @@
             } else {
                 console.log("loi j do ve control");
             }
+           
             $('img.modal-topic_img-image').okzoom({
                 width: 200,
                 height: 200,
@@ -536,6 +539,8 @@
                 shadow: "0 0 5px #000",
                 border: "1px solid black"
             });
+
+           
 
         }
 
