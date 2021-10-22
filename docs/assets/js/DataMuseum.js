@@ -89,7 +89,7 @@ window.DataMuseum = (function() {
         let urlFoot = item["url_full"].split('.')[2];
         if (urlFoot == "png" || urlFoot == "jpeg" || urlFoot == "jpg") choiceURLFull = `<img src="${item["url_full"]}" class="modal-topic_img-image" data-action="zoom" />`
         else if (urlFoot == "gltf") {
-            choiceURLFull = `<model-viewer alt="" src="${item["url_full"]}" seamless-poster shadow-intensity="1" camera-controls class="model_viewer modal-topic_img-image"></model-viewer>`
+            choiceURLFull = `<model-viewer alt="" src="${item["url_full"]}" seamless-poster shadow-intensity="1" camera-controls ></model-viewer>`
         } else {
             choiceURLFull = `
         <video controls >
