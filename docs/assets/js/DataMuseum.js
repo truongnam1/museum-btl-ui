@@ -155,7 +155,6 @@ window.DataMuseum = (function() {
         var item = data[idItem];
         console.log("this is modal123");
         let choiceURLFull = extUrl(item["url_full"], "modal");
-
         let html = `
 
         <div class="modal-dialog modal-lg modal-dialog-centered" id="main-myModal" index-data="${idItem}">
