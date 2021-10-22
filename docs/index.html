@@ -515,38 +515,41 @@
         function clickCard(idItem) {
             console.log('click card ' + idItem);
             DataMuseum.renderItemHTMLModal(modal, idItem, arrItem.images);
-            $('.modal-topic_img-image').okzoom({
-                width: 200,
-                height: 200,
-                scaleWidth: 800,
-                round: true,
-                background: "#fff",
-                // backgroundRepeat: "repeat",
-                shadow: "0 0 5px #000",
-                border: "1px solid black"
-            });
+            $(document).ready(function() {
+                $('.modal-topic_img-image').okzoom({
+                    width: 200,
+                    height: 200,
+                    scaleWidth: 800,
+                    round: true,
+                    background: "#fff",
+                    // backgroundRepeat: "repeat",
+                    shadow: "0 0 5px #000",
+                    border: "1px solid black"
+                });
 
-            $('#data_fetch video').each(function() {
+                $('#data_fetch video').each(function() {
 
-                $(this)[0].pause();
-
-            })
-
-            $('#myModal').on('hidden.bs.modal', function() {
-                $('video').each(function() {
-                    if ($(this).is(":in-viewport")) {
-                        $(this)[0].play();
-                    } else {
-                        $(this)[0].pause();
-                    }
-
-                    $('#myModal video').each(function() {
-                        $(this)[0].pause();
-                    })
-
+                    $(this)[0].pause();
 
                 })
+
+                $('#myModal').on('hidden.bs.modal', function() {
+                    $('video').each(function() {
+                        if ($(this).is(":in-viewport")) {
+                            $(this)[0].play();
+                        } else {
+                            $(this)[0].pause();
+                        }
+
+                        $('#myModal video').each(function() {
+                            $(this)[0].pause();
+                        })
+
+
+                    })
+                })
             })
+
         }
 
         function clickControlSlide(control) {
