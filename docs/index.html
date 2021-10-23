@@ -513,7 +513,9 @@
                 })
 
                 $('iframe').each(function() {
+                    if ($(this).is(":in-viewport")) {
                         $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+                    }
                 })
                 
 
@@ -533,8 +535,10 @@
                     })
 
                     $('iframe').each(function() {
-                        $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-                })
+                        if ($(this).is(":in-viewport")) {
+                            $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+                        }
+                        })
                 })
             })
 
