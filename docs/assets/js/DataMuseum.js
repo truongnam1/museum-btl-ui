@@ -103,7 +103,7 @@ window.DataMuseum = (function() {
                     break;
                 case 'modal':
                     html = `
-                        <video controls >
+                        <video  controls >
                         <source src="${url}" type="video/mp4">
                     </video>
                             `;
@@ -120,12 +120,12 @@ window.DataMuseum = (function() {
             switch (code) {
                 case 'card':
                     html = `
-                    <iframe id="cardYTB-${idYTB}" class="mw-100" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/${idYTB}?mute=1&autoplay=1&controls=0&showinfo=0&modestbranding=1&loop=1&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=0&enablejsapi=1&widgetid=1"></iframe>
+                    <iframe id="cardYTB-${idYTB}" class="mw-100" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/${idYTB}?mute=0&autoplay=1&controls=0&showinfo=0&modestbranding=1&loop=1&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=0&enablejsapi=1&widgetid=1"></iframe>
                     `;
                     break;
                 case 'modal':
                     html = `
-                    <iframe id="modalYTB-${idYTB}" class="modal-topic_img-image" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="560" height="316" src="https://www.youtube.com/embed/${idYTB}?autoplay=0&controls=1&showinfo=1&modestbranding=1&loop=1&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=0&enablejsapi=1&widgetid=1"></iframe>
+                    <iframe id="modalYTB-${idYTB}" class="modal-topic_img-image" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="560" height="316" src="https://www.youtube.com/embed/${idYTB}?mute=0&autoplay=1&controls=1&showinfo=1&modestbranding=1&loop=1&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=0&enablejsapi=1&widgetid=1"></iframe>
                     `;
                     break;
                 default:

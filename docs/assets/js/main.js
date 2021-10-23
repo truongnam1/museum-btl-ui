@@ -35,7 +35,31 @@ $(document).ready(function() {
                 this.pause();
             }
         })
+
+        $('iframe').each(function() {
+
+            if ($(this).is(":in-viewport")) {
+                const url = $(this).attr('src');
+                const index = url.indexOf("autoplay=0");
+                if(index != -1) {
+                    const newUrl = url.replace('autoplay=0', 'autoplay=1')
+                    $(this).attr('src',newUrl);
+                }
+               
+            } else {
+                const url = $(this).attr('src');
+                const index = url.indexOf("autoplay=1");
+                if(index != -1) {
+                    const newUrl = url.replace('autoplay=1', 'autoplay=0')
+                    $(this).attr('src',newUrl);
+                }
+            }
+           
+           
+        })
     })
+
+
     $("body video").each(function() {
         this.muted = true;
     })
