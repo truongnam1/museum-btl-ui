@@ -492,6 +492,7 @@
 
         function clickCard(idItem) {
             console.log('click card ' + idItem);
+            // $('#cardYTB-DwyzrcRw0EI')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
             DataMuseum.renderItemHTMLModal(modal, idItem, arrItem.images);
             $(document).ready(function() {
                 $('img.modal-topic_img-image').okzoom({
@@ -511,21 +512,30 @@
 
                 })
 
-                // $('#myModal').on('hidden.bs.modal', function() {
-                //     $('video').each(function() {
-                //         if ($(this).is(":in-viewport")) {
-                //             $(this)[0].play();
-                //         } else {
-                //             $(this)[0].pause();
-                //         }
+                $('iframe').each(function() {
+                        $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+                })
+                
 
-                //         $('#myModal video').each(function() {
-                //             $(this)[0].pause();
-                //         })
+                $('#myModal').on('hidden.bs.modal', function() {
+                    $('video').each(function() {
+                        if ($(this).is(":in-viewport")) {
+                            $(this)[0].play();
+                        } else {
+                            $(this)[0].pause();
+                        }
+
+                        $('#myModal video').each(function() {
+                            $(this)[0].pause();
+                        })
 
 
-                //     })
-                // })
+                    })
+
+                    $('iframe').each(function() {
+                        $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+                })
+                })
             })
 
             
