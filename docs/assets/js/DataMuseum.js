@@ -119,13 +119,13 @@ window.DataMuseum = (function() {
             let idYTB = nameYTB[0];
             switch (code) {
                 case 'card':
-                    html = `
-                    <iframe id="cardYTB-${idYTB}" class="mw-100" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/${idYTB}?mute=0&autoplay=1&controls=0&showinfo=0&modestbranding=1&loop=1&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=0&enablejsapi=1&widgetid=1"></iframe>
+                    html = ` 
+                    <iframe id="cardYTB-${idYTB}" class="mw-100" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/${idYTB}?mute=1&autoplay=1&controls=0&showinfo=0&modestbranding=1&loop=1&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=0&enablejsapi=1&widgetid=1&playlist=${idYTB}"></iframe>
                     `;
                     break;
                 case 'modal':
                     html = `
-                    <iframe id="modalYTB-${idYTB}" class="modal-topic_img-image" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="560" height="316" src="https://www.youtube.com/embed/${idYTB}?mute=0&autoplay=1&controls=1&showinfo=1&modestbranding=1&loop=1&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=0&enablejsapi=1&widgetid=1"></iframe>
+                    <iframe id="modalYTB-${idYTB}" class="modal-topic_img-image" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="560" height="316" src="https://www.youtube.com/embed/${idYTB}?mute=0&autoplay=0&controls=1&showinfo=1&modestbranding=1&loop=1&fs=0&cc_load_policy=0&iv_load_policy=3&autohide=0&enablejsapi=1&widgetid=1"></iframe>
                     `;
                     break;
                 default:
@@ -146,6 +146,27 @@ window.DataMuseum = (function() {
                 default:
                     break;
             }
+        } else if (ext == "TXT") {
+            let arrPath = url.split('/');
+            let name3d = arrPath[arrPath.length - 1].split(".");
+            // console.log("nameYTB: ");
+            // console.log(nameYTB);
+            let id3d = name3d[0];
+
+            switch (code) {
+                case 'card':
+                    html = `<iframe  class="w-100" height=90% title="Trống Ngọc Lũ" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+            src="https://sketchfab.com/models/${id3d}/embed"> </iframe>`;
+                    break;
+                case 'modal':
+                    html = `<iframe style="border-radius: 12px;" class="w-100" height=90% title="Trống Ngọc Lũ" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+            src="https://sketchfab.com/models/${id3d}/embed"> </iframe>`;
+                    break;
+                default:
+                    break;
+            }
+
+
         }
         return html;
     }
