@@ -40,7 +40,7 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
             <a class="navbar-brand font-weight-bolder mr-3" href="index.html"><img src="assets/image/logo.png"></a>
             <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,13 +57,40 @@
                 </ul>
             </div>
         </nav>
+    </header> -->
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
+            <a class="navbar-brand font-weight-bolder mr-3" href="index.html"><img src="assets/image/logoo.png" style="
+                max-height: 60px;"></a>
+            <!-- <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+
+            <div class="collapse navbar-collapse" id="navbarsDefault">
+                <ul class="navbar-nav mr-auto align-items-center">
+                    <!-- <form class="bd-search hidden-sm-down" id="header-search-form">
+                        <input type="text" class="form-control border-0 font-weight-bold" id="search-input" placeholder="Tìm kiếm..." autocomplete="off">
+                        <div class="dropdown-menu bd-search-results" id="search-results">
+                        </div>
+                    </form> -->
+
+                    <li>
+                        <h4>Hiện vật bảo tàng</h4>
+                        <p><strong>Tác giả:</strong> <i style="
+                            font-size: 0.9rem;
+                        ">Theo Bao Chẩn (người không có bất kỳ mối liên hệ nào đến B Ray)</i></p>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <div class="container">
 
         <div class="main">
             <!-- navbar category -->
-            <section>
+            <!-- <section>
                 <div class="row mb-1 mt-1">
 
                     <nav class="navbar navbar-expand navbar-light bg-navbar-museum pl-2 pr-2 mw-100">
@@ -121,7 +148,7 @@
                         </div>
                     </nav>
                 </div>
-            </section>
+            </section> -->
 
             <!-- item -->
             <section>
@@ -198,10 +225,16 @@
                     <div class="modal-dialog" id="main-myModal" index-data="1">
 
                     </div>
+
                 </div>
 
             </div>
         </section>
+
+
+
+
+
     </div>
 
     <!-- Optional JavaScript -->
@@ -210,6 +243,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+
 
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/navbar-category.js"></script>
@@ -229,256 +264,167 @@
     <script>
         let arrItem = {
             "images": [{
-                "path": "Nhom08/Data/Bot-avt.png",
-                "title": "Bot-avt",
-                "desc": "đây là con bot",
-                "date": 1634781109,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/Bot-avt.png",
-                "url_sized": "/zp-core/i.php?a=Nhom08/Data&i=Bot-avt.png&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/Data/Bot-avt_95_w95_h95_cw95_ch95_thumb.png?cached=1634781781",
-                "width": 180,
-                "height": 350,
-                "index": 0
-            }, {
-                "path": "Nhom08/Data/download-1-.png",
-                "title": "download (1)",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-                "date": 1634477899,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/download-1-.png",
-                "url_sized": "/zp-core/i.php?a=Nhom08/Data&i=download-1-.png&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/zp-core/i.php?a=Nhom08/Data&i=download-1-.png&s=95&w=95&h=95&cw=95&ch=95&q=75&c=1&t=1&wmk=!&check=29194af96442def55c91dc1282b309152aacabeb",
-                "width": 217,
-                "height": 232,
-                "index": 1
-            }, {
-                "path": "Nhom08/data2/R3trO4a49go.ytb",
-                "title": "video nhạc",
-                "desc": "đây là cái video về nhạc test",
-                "date": 1634892077,
-                "url_full": "/albums/Nhom08/data2/R3trO4a49go.ytb",
-                "url_sized": "<img src=\"/cache/Nhom08/data2/zp-core_class-AnyFile_anyFileDefault_95_w95_h95_cw95_ch95_thumb.png?cached=1634892222\" loading=\"lazy\">",
-                "url_thumb": "/cache/Nhom08/data2/zp-core_class-AnyFile_anyFileDefault_95_w95_h95_cw95_ch95_thumb.png?cached=1634892222",
-                "width": 580,
-                "height": 386,
-                "index": 10,
-            }, {
-                "path": "Nhom08/Data/download-2-.png",
-                "title": "download (2)",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-                "date": 1634477899,
-                "url_full": "./assets/image/pikachu.mp4",
-                "url_sized": "/zp-core/i.php?a=Nhom08/Data&i=download-2-.png&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/zp-core/i.php?a=Nhom08/Data&i=download-2-.png&s=95&w=95&h=95&cw=95&ch=95&q=75&c=1&t=1&wmk=!&check=29194af96442def55c91dc1282b309152aacabeb",
-                "width": 259,
-                "height": 194,
-                "index": 2
-            }, {
-                "path": "Nhom08/Data/download.png",
-                "title": "download",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-                "date": 1634477899,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/download.png",
-                "url_sized": "/zp-core/i.php?a=Nhom08/Data&i=download.png&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/zp-core/i.php?a=Nhom08/Data&i=download.png&s=95&w=95&h=95&cw=95&ch=95&q=75&c=1&t=1&wmk=!&check=29194af96442def55c91dc1282b309152aacabeb",
-                "width": 226,
-                "height": 223,
-                "index": 3
-            }, {
-                "path": "Nhom08/Data/images-1-.png",
-                "title": "images (1)",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-                "date": 1634477899,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/images-1-.png",
-                "url_sized": "/zp-core/i.php?a=Nhom08/Data&i=images-1-.png&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/zp-core/i.php?a=Nhom08/Data&i=images-1-.png&s=95&w=95&h=95&cw=95&ch=95&q=75&c=1&t=1&wmk=!&check=29194af96442def55c91dc1282b309152aacabeb",
-                "width": 201,
-                "height": 251,
-                "index": 4
-            }, {
-                "path": "Nhom08/Data/images.png",
-                "title": "images",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-                "date": 1634477899,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/images.png",
-                "url_sized": "/zp-core/i.php?a=Nhom08/Data&i=images.png&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/zp-core/i.php?a=Nhom08/Data&i=images.png&s=95&w=95&h=95&cw=95&ch=95&q=75&c=1&t=1&wmk=!&check=29194af96442def55c91dc1282b309152aacabeb",
-                "width": 201,
-                "height": 251,
-                "index": 5
-            }, {
-                "path": "Nhom08/Data/logouet.png",
-                "title": "logouet",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-                "date": 1634115810,
-                "url_full": "./assets/image/scene.gltf",
-                "url_sized": "/zp-core/i.php?a=Nhom08/Data&i=logouet.png&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/Data/logouet_95_w95_h95_cw95_ch95_thumb.png?cached=1634178018",
-                "width": 509,
-                "height": 512,
-                "index": 6
-            }, {
-                "path": "Nhom08/Data/logouet.png",
-                "title": "logouet",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-                "date": 1634115810,
-                "url_full": "./assets/image/scene.gltf",
-                "url_sized": "/zp-core/i.php?a=Nhom08/Data&i=logouet.png&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/Data/logouet_95_w95_h95_cw95_ch95_thumb.png?cached=1634178018",
-                "width": 509,
-                "height": 512,
-                "index": 7
-            }, {
-                "path": "Nhom08/Data/logouet.png",
-                "title": "logouet",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-                "date": 1634115810,
-                "url_full": "./assets/image/scene.gltf",
-                "url_sized": "/zp-core/i.php?a=Nhom08/Data&i=logouet.png&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/Data/logouet_95_w95_h95_cw95_ch95_thumb.png?cached=1634178018",
-                "width": 509,
-                "height": 512,
-                "index": 10
-            }, {
-                "path": "Nhom08/data2/1.jpg",
-                "title": "1",
-                "date": 1634837688,
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/data2/1.jpg",
-                "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=1.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/data2/1_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837793",
-                "width": 1080,
-                "height": 1350,
-                "index": 1
-            }, {
-                "path": "Nhom08/data2/2.jpg",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+                    'id': 1,
+                    "path": "Nhom08/Data/album1/--nh-th-b-ng-b-c.jpg",
+                    "title": `Đỉnh thờ bằng bạc`,
+                    "desc": `Một chiếc đỉnh thờ khác đúc bằng bạc, niên hiệu Khải Định thứ nhất (1916), chiều cao 29,5 cm. Bề mặt hiện vật được chạm khắc tỉ mỉ từng chi tiết. Theo nội dung cuốn sách, hoa văn trang trí chủ đạo của bảo vật là hình rồng 5 móng và hình phượng, biểu tượng của vua và hoàng hậu. Ngoài ra là các đề tài biểu tượng cho quốc thái dân an, thiên hạ thái bình, cho đấng quân tử và cầu chúc những điều tốt lành cho cuộc sống phú quý, khang kiện, phúc, lộc, trường thọ, may mắn, hạnh phúc...`,
+                    "date": "1635349090",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/--nh-th-b-ng-b-c.jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/--nh-th-b-ng-b-c_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349173",
+                }, {
+                    'id': 2,
+                    "path": "Nhom08/Data/album1/-n-Loan-ph-ng-ng--i-ng--ng-nh-t-th-ng-Thi-u-Tr-chi-b-o.jpg",
+                    "title": `ấn Loan phụng ngũ đại đồng đường nhất thống Thiệu Trị chi bảo`,
+                    "desc": `Ấn “Hoan phụng ngũ đại đồng đường nhất thống Thiệu Trị chi bảo”, chất liệu ngà. Niên hiệu Thiệu Trị thứ 6-7 (1846-1847), vua Thiệu Trị cho làm bảo ấn này nhân dịp hoàng gia có thêm thành viên thế hệ thứ 5 trong một gia đình (tính từ Thái hoàng Thái hậu Thuận Thiên – chính cung của Hoàng đế Gia Long đến người cháu thứ 5 vừa được sinh hạ).`,
+                    "date": "1635349090",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/-n-Loan-ph-ng-ng--i-ng--ng-nh-t-th-ng-Thi-u-Tr-chi-b-o.jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/-n-Loan-ph-ng-ng--i-ng--ng-nh-t-th-ng-Thi-u-Tr-chi-b-o_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349172",
+                }, {
+                    'id': 3,
+                    "path": "Nhom08/Data/album1/-n-T--c-th-n-h-n.jpg",
+                    "title": `Ấn Tự Đức thần hàn`,
+                    "desc": `1. Kim ấn: Tự Đức thần hàn. Ấn đúc bằng vàng, 2 cấp hình vuông, quai là tượng rồng chầu, 2 chân trước chống, 2 chân sau quỳ, đầu ngẩng, mũi cao, bờm dài, đuôi xoáy. Lưng ấn khắc 2 dòng chữ Hán:
 
-                "title": "2",
-                "date": 1634837688,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/data2/2.jpg",
-                "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=2.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/data2/2_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837793",
-                "width": 1080,
-                "height": 741,
-                "index": 3
-            }, {
-                "path": "Nhom08/data2/3.jpg",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+- Bên trái: Thập tuế hoàng kim, thất thập lục lạng lục tiền ngũ phân (Vàng 10 tuổi, nặng 76 lạng 6 tiền 5 phân).
 
-                "title": "3",
-                "date": 1634837688,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/data2/3.jpg",
-                "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=3.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/data2/3_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837793",
-                "width": 1080,
-                "height": 1350,
-                "index": 5
-            }, {
-                "path": "Nhom08/data2/4.jpg",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+- Bên phải: Tự Đức nguyên niên nhị nguyệt cát nhật tạo. (Đúc vào ngày lành tháng 2 năm năm Tự Đức 1, 1848).
 
-                "title": "4",
-                "date": 1634837688,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/data2/4.jpg",
-                "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=4.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/data2/4_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837796",
-                "width": 1080,
-                "height": 1157,
-                "index": 7
-            }, {
-                "path": "Nhom08/data2/5.jpg",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+Mặt ấn đúc nổi 4 chữ Triện trong khung diềm: Tự Đức Thần hàn. (Văn từ ở cung vua Tự Đức).`,
+                    "date": "1635349090",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/-n-T--c-th-n-h-n.jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/-n-T--c-th-n-h-n_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349172",
+                }, {
+                    'id': 4,
+                    "path": "Nhom08/Data/album1/B--a-ng-m-n-g-i-trong-m-th-c-cung--nh-Hu-.jpg",
+                    "title": `Bộ đĩa đựng món gỏi trong ẩm thực cung đình Huế`,
+                    "desc": `Qua các kỳ Festival Huế, chương trình Đêm Hoàng cung đã trở thành thương hiệu đặc biệt của Huế nói chung và Trung tâm Bảo tồn Di tích Cố đô Huế nói riêng. Trong Đêm Hoàng cung, điểm nhấn là chương trình dạ nhạc tiệc với những món ăn cung đình hoà quyện với sắc màu lung linh, huyền bí và âm thanh trang nhã của yến nhạc Triều Nguyễn.`,
+                    "date": "1635349090",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/B--a-ng-m-n-g-i-trong-m-th-c-cung--nh-Hu-.jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/B--a-ng-m-n-g-i-trong-m-th-c-cung--nh-Hu-_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349172",
+                }, {
+                    'id': 5,
+                    "path": "Nhom08/Data/album1/C-a--ng-th-nh-ng-H-i..jpg",
+                    "title": `Cửa Đông thành Đồng Hới.`,
+                    "desc": `Quảng Bình, đặc biệt là mảnh đất Đồng Hới, nơi tranh chấp dai dẳng, quyết liệt, kéo dài ngót 200 năm giữa hai tập đoàn phong kiến Đàng Trong và Đàng Ngoài. Cuộc phân tranh Trịnh-Nguyễn đã để lại ở Đồng Hới nhiều di tích lịch sử văn hóa tiêu biểu, trong đó phải kể đến di tích lũy Thầy, Quảng Bình quan và tấm bia Định Bắc trường thành.`,
+                    "date": "1566009124",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/C-a--ng-th-nh-ng-H-i..jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/C-a--ng-th-nh-ng-H-i._95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
+                }, {
+                    'id': 6,
+                    "path": "Nhom08/Data/album1/Ch-nh-i-n-c-a-Th-i-T-.jpg",
+                    "title": `Chánh điện của Thái Tổ`,
+                    "desc": `Thái Tổ miếu là công trình kiến trúc gỗ quy mô lớn nhất trong Hoàng thành Huế, được vua Gia Long cho xây dựng vào năm 1804 với 15 gian 2 chái, dài gần 70 m. Thái Tổ miếu thờ chúa Nguyễn Hoàng cùng 8 chúa triều Nguyễn.
 
-                "title": "5",
-                "date": 1634837688,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/data2/5.jpg",
-                "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=5.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/data2/5_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837796",
-                "width": 1080,
-                "height": 1350,
-                "index": 8
-            }, {
-                "path": "Nhom08/data2/6.jpg",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
+Vào năm 1947, Thái Tổ miếu bị thiêu rụi do chiến tranh. Năm 1971, bà Từ Cung và hoàng tử Bảo Long đã góp tiền xây dựng lại một phần Thái Tổ miếu trên nền cũ của công trình để thờ các chúa triều Nguyễn.`,
+                    "date": "1635349942",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/Ch-nh-i-n-c-a-Th-i-T-.jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/Ch-nh-i-n-c-a-Th-i-T-_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
+                }, {
+                    'id': 7,
+                    "path": "Nhom08/Data/album1/eb9be13432d84c60913a5fd98fc5e190.txt",
+                    "title": `tieu de`,
+                    "desc": ``,
+                    "date": "1635350097",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/eb9be13432d84c60913a5fd98fc5e190.txt",
+                    "url_thumb": "/cache/Nhom08/Data/album1/zp-core_class-textobject_textDefault_95_w95_h95_cw95_ch95_thumb.png?cached=1635350238",
+                }, {
+                    'id': 8,
+                    "path": "Nhom08/Data/album1/IMG_4933.jpg",
+                    "title": `Pháo cao xạ`,
+                    "desc": `Khẩu Hải pháo 10cm/65 Loại 98 (六五口径九八式一〇糎高角砲?) hay còn gọi là Pháo cao xạ 10cm dài (長10センチ高角砲 Chō 10-senchi kōkaku-hō?) là hải pháo hạng nhẹ sử dụng bởi Hải quân Đế quốc Nhật Bản trong Chiến tranh thế giới thứ hai. Chúng được trang bị trên tàu sân bay Taihō, tàu tuần dương hạng nhẹ Ōyodo, và tàu khu trục lớp Akizuki.[2][3] và đến năm 1945 bao gồm cả trên bộ. Nó được mệnh danh là pháo phòng không hàng đầu của Lực lượng vũ trang Đế quốc Nhật Bản trong Chiến tranh thế giới thứ hai. Sau chiến tranh, khẩu pháo này tiếp tục phục vụ trong Hải quân Liên Xô và Hải quân Trung Hoa Dân Quốc qua hai con tàu khu trục chiến tích.`,
+                    "date": "1398845153",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/IMG_4933.jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/IMG_4933_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
+                }, {
+                    'id': 9,
+                    "path": "Nhom08/Data/album1/jAof9fDT_bM.ytb",
+                    "title": `jAof9fDT_bM`,
+                    "desc": ``,
+                    "date": "1635350699",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/jAof9fDT_bM.ytb",
+                    "url_thumb": "/cache/Nhom08/Data/album1/zp-core_class-AnyFile_anyFileDefault_95_w95_h95_cw95_ch95_thumb.png?cached=1635350238",
+                }, {
+                    'id': 10,
+                    "path": "Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg",
+                    "title": `Lăng vua Thiệu Trị`,
+                    "desc": `Lăng Thiệu Trị có tên chữ là Xương Lăng (昌陵) là nơi chôn cất hoàng đế Thiệu Trị. Đây là một di tích trong Quần thể di tích cố đô Huế được UNESCO công nhận là di sản văn hóa thế giới ngày 11 tháng 12 năm 1993.
+Lăng Thiệu Trị nằm dựa lưng vào núi Thuận Đạo, ở địa phận làng Cư Chánh, xã Thủy Bằng, thành phố Huế, cách trung tâm thành phố khoảng 8 km. So với lăng tẩm các vua tiền nhiệm và kế vị, lăng Thiệu Trị có những nét riêng. Đây là lăng duy nhất quay mặt về hướng Tây Bắc, một hướng ít được dùng trong kiến trúc cung điện và lăng tẩm thời Nguyễn. Cách lăng 8 km về phía trước, ngọn núi Chằm sừng sững được chọn làm tiền án. Dòng sông Hương chảy qua trước mặt làm yếu tố minh đường. Ngay cách chọn "Tả thanh long" và "Hữu bạch hổ" cũng có những nét khác thường: đồi Vọng Cảnh ở bên này sông được chọn làm "rồng chầu", nhưng "hổ phục" lại là ngọn Ngọc Trản ở bên kia sông. Đằng sau, núi Kim Ngọc xa mờ trong mây được chọn làm hậu chẩm; đồng thời, những người kiến trúc lăng còn đắp thêm một mô đất cao lớn ở ngay sau lăng để làm hậu chẩm thứ hai. Một nét riêng khác là lăng không có La thành bao quanh. Nếu ở lăng Gia Long, La thành bằng gạch được thay thế bởi vô số núi đồi bao quanh như một vành đai tự nhiên, hùng tráng bảo vệ giấc ngủ cho vị tiên đế triều Nguyễn thì ở lăng Thiệu Trị, những cánh đồng lúa, những vườn cây xanh rờn ở chung quanh được xem là La thành. Chính vòng La thành thiên nhiên đó tạo cho cảnh quan lăng Thiệu Trị sự thanh thoát và yên bình.`,
+                    "date": "1599869403",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
+                }, {
+                    'id': 11,
+                    "path": "Nhom08/Data/album1/l6Q7GHrtJGo.ytb",
+                    "title": `l6Q7GHrtJGo`,
+                    "desc": ``,
+                    "date": "1635350744",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/l6Q7GHrtJGo.ytb",
+                    "url_thumb": "/cache/Nhom08/Data/album1/zp-core_class-AnyFile_anyFileDefault_95_w95_h95_cw95_ch95_thumb.png?cached=1635350238",
+                }, {
+                    'id': 12,
+                    "path": "Nhom08/Data/album1/M-th--ng-tri-u-c-a-Vua-tri-u-Nguy-n.jpg",
+                    "title": `Mũ thượng triều của Vua triều Nguyễn`,
+                    "desc": ` Ấn tượng đặc biệt từ chiếc mũ thượng triều của vua nhà Nguyễn là 35 con rồng năm móng bằng vàng ròng được gắn ở nhiều vị trí khác nhau, mang tính đối xứng chặt chẽ. Xét về vai trò, chiếc mũ này tương đương với vương miện của các hoàng đế phương Tây.`,
+                    "date": "1635349090",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/M-th--ng-tri-u-c-a-Vua-tri-u-Nguy-n.jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/M-th--ng-tri-u-c-a-Vua-tri-u-Nguy-n_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349173",
+                }, {
+                    'id': 13,
+                    "path": "Nhom08/Data/album1/Phi-n-ng-c-Ng-di-n-v-n-b-o.jpg",
+                    "title": `Phiến ngọc Ngự diên văn bảo`,
+                    "desc": `Phiến ngọc Ngự diên văn bảo hình chữ nhật có
+diềm khung nổi, chạm hồi văn chữ S đầu vuông.
+Phiến ngọc tạo bằng ngọc trắng xám, diềm 4 góc
+và xung quanh chạm hình bướm và hoa dây.
+Trong diềm chạm 2 hình rồng uốn mình, đầu
+ngẩng cao chầu viên bảo ngọc, trên nền mây.
+Kiểu rồng đuôi xoáy này rất phổ biến trong nghệ
+thuật Nguyễn. Chính giữa phiến ngọc khắc nổi 4
+chữ triện: Ngự diên văn bảo (nơi lưu giữ các văn
+bản quý của hoàng đế). Phiến ngọc này hẳn đã
+được dùng đặt ở nơi văn`,
+                    "date": "1635349378",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/Phi-n-ng-c-Ng-di-n-v-n-b-o.jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/Phi-n-ng-c-Ng-di-n-v-n-b-o_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
+                }, {
+                    'id': 14,
+                    "path": "Nhom08/Data/album1/Qu-c-u-c-u-long-s-n-th-p-th-i-Nguy-n-1802-1945..jpg",
+                    "title": `Quả cầu cửu long sơn thếp thời Nguyễn 1802-1945.`,
+                    "desc": `Quả cầu cửu long bằng gỗ sơn son thếp vàng là hiện vật tiêu biểu độc đáo về chạm khắc gỗ thời Nguyễn`,
+                    "date": "1536286306",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/Qu-c-u-c-u-long-s-n-th-p-th-i-Nguy-n-1802-1945..jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/Qu-c-u-c-u-long-s-n-th-p-th-i-Nguy-n-1802-1945._95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
+                }, {
+                    'id': 15,
+                    "path": "Nhom08/Data/album1/thumb_660_e2482e05-ab89-41f4-931c-bd7e66771923.jpeg",
+                    "title": `Đường cách mệnh`,
+                    "desc": `Đường Kách mệnh (hay Đường cách mệnh, tên cuốn sách trên bản gốc được viết là "Dường Kách mệnh"[a]) là tác phẩm ghi lại những bài giảng của Nguyễn Ái Quốc cho các lớp đào tạo cán bộ tại Quảng Châu do Bộ tuyên truyền của "Hội Liên hiệp các dân tộc bị áp bức ở Á Đông" phát hành vào đầu năm 1927. Cuốn sách này đánh dấu cho sự truyền bá Chủ nghĩa Marx – Lenin vào Việt Nam những năm 20 của thế kỷ XX.[1]
+Theo nhà báo – học giả Quang Đạm, hai chữ "cách mệnh" từ Trung Quốc vào Việt Nam có thể là vào những năm xã hội Việt Nam tiếp nhận "Tân thư" của Khang Hữu Vi, Lương Khải Siêu (cùng khoảng thời gian với các tác phẩm từ nước Pháp của R.Descartes, Montesquieu). Chữ "cách mệnh" theo tinh thần của Nho giáo Trung Quốc là "đổi cái mệnh Trời giao cho con Trời (thiên tử) – là vua nếu vua không làm tròn nhiệm vụ, giữ cái mệnh ấy, vì vậy phải giao "sứ mệnh" này cho con Trời khác".[2]`,
+                    "date": "1635350065",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/thumb_660_e2482e05-ab89-41f4-931c-bd7e66771923.jpeg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/thumb_660_e2482e05-ab89-41f4-931c-bd7e66771923_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
+                }, {
+                    'id': 16,
+                    "path": "Nhom08/Data/album1/trong-dong-dong-son-1.jpg",
+                    "title": `Trống Đồng Đông Sơn`,
+                    "desc": `Trống đồng Đông Sơn là tên một loại trống đồng tiêu biểu cho Văn hóa Đông Sơn (700 TCN - 100) của người Việt cổ. Những chiếc trống này với quy mô đồ sộ, hình dáng cân đối, hài hoà đã thể hiện một trình độ rất cao về kỹ năng và nghệ thuật, đặc biệt là những hoa văn phong phú được khắc họa, miêu tả chân thật đời sống sinh hoạt của con người thời kỳ dựng nước mà người ta vẫn cho là chìm trong đám mây mù của truyền thuyết Việt Nam. Viện Bảo tàng Lịch sử Việt Nam đã lưu giữ một số lớn trống đồng Đông Sơn. Cho đến nay, theo các số liệu đã công sưu tập lớn nhất thế giới. Ngôi sao nhiều cánh ở giữa mặt trống tượng trưng cho thần Mặt Trời vì người dân Văn Lang có quan niệm về một vị thần liên quan đến Mặt Trời`,
+                    "date": "1635348353",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/trong-dong-dong-son-1.jpg",
+                    "url_thumb": "/cache/Nhom08/Data/album1/trong-dong-dong-son-1_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349173",
+                }, {
+                    'id': 17,
+                    "path": "Nhom08/Data/album1/test-height.png",
+                    "title": "test-height",
+                    "date": 1635737749,
+                    'desc': 'noi dung',
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/test-height.png",
+                    "url_sized": "/zp-core/i.php?a=Nhom08/Data/album1&i=test-height.png&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
+                    "url_thumb": "/cache/Nhom08/Data/album1/test-height_95_w95_h95_cw95_ch95_thumb.png?cached=1635737778",
+                    "width": 500,
+                    "height": 1597,
+                },
 
-                "title": "6",
-                "date": 1634837688,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/data2/6.jpg",
-                "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=6.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/data2/6_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837796",
-                "width": 1080,
-                "height": 1350,
-                "index": 9
-            }, {
-                "path": "Nhom08/data2/7.jpg",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-
-                "title": "7",
-                "date": 1634837688,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/data2/7.jpg",
-                "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=7.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/data2/7_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837796",
-                "width": 1080,
-                "height": 1350,
-                "index": 10
-            }, {
-                "path": "Nhom08/data2/8.jpg",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-
-                "title": "8",
-                "date": 1634837688,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/data2/8.jpg",
-                "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=8.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/data2/8_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837796",
-                "width": 1080,
-                "height": 1350,
-                "index": 11
-            }, {
-                "path": "Nhom08/data2/9.jpg",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân \ntộc.",
-                "title": "9",
-                "date": 1634837688,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/data2/9.jpg",
-                "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=9.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/data2/9_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837796",
-                "width": 750,
-                "height": 937,
-                "index": 12
-            }, {
-                "path": "Nhom08/data2/10.jpg",
-                "desc": "đây là bảo vật quốc gia đã được lưu trữ hàng nghìn năm trong bảo tàng dân tộc",
-
-                "title": "10",
-                "date": 1634837688,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/data2/10.jpg",
-                "url_sized": "/zp-core/i.php?a=Nhom08/data2&i=10.jpg&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                "url_thumb": "/cache/Nhom08/data2/10_95_w95_h95_cw95_ch95_thumb.jpg?cached=1634837797",
-                "width": 2760,
-                "height": 4052,
-                "index": 13
-            }, {
-                "path": "Nhom08/data2/jNQXAC9IVRw.ytb",
-                "title": "video nhạc",
-                "desc": "đây là cái video về nhạc test",
-                "date": 1634892077,
-                "url_full": "/albums/Nhom08/data2/jNQXAC9IVRw.ytb",
-                "url_sized": "<img src=\"/cache/Nhom08/data2/zp-core_class-AnyFile_anyFileDefault_95_w95_h95_cw95_ch95_thumb.png?cached=1634892222\" loading=\"lazy\">",
-                "url_thumb": "/cache/Nhom08/data2/zp-core_class-AnyFile_anyFileDefault_95_w95_h95_cw95_ch95_thumb.png?cached=1634892222",
-                "width": 580,
-                "height": 386,
-                "index": 10,
-            }, {
-                "path": "Nhom08/data2/file3d_93c8cf43b7fd421b8818ade273bb49a2.txt",
-                "title": "tieu de",
-                "desc": "mo ta",
-                "date": 1635343963,
-                "url_full": "https://hcloud.trealet.com/albums/Nhom08/data2/93c8cf43b7fd421b8818ade273bb49a2.txt",
-                "url_sized": "<div style=\"width:580px;height:386px;\" class=\"textobject\">{\r\n\"type\" : \"3d\"\r\n\"url\" : \"https://sketchfab.com/models/93c8cf43b7fd421b8818ade273bb49a2/embed\"\r\n}</div>",
-                "url_thumb": "/cache/Nhom08/data2/zp-core_class-textobject_textDefault_95_w95_h95_cw95_ch95_thumb.png?cached=1635343980",
-                "width": 580,
-                "height": 386,
-                "index": 12,
-            }]
+            ]
         }
     </script>
 
@@ -531,6 +477,8 @@
 
 
                 $('#myModal').on('hidden.bs.modal', function() {
+
+
                     $('video').each(function() {
                         if ($(this).is(":in-viewport")) {
                             $(this)[0].play();
@@ -600,7 +548,44 @@
             }
             console.log(e);
         }
+
+        // copy link share
+        function copyLinkShare() {
+            /* Get the text field */
+            var copyText = document.getElementById("input-link-share");
+
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.value);
+
+            /* Alert the copied text */
+            console.log("Copied the text: " + copyText.value);
+
+            var html = `Sao chép thành công`;
+            const newSpan = document.createElement("span");
+            newSpan.innerHTML = html;
+            newSpan.setAttribute('style', 'color: #fff;background-color: #000;opacity: 0.8;padding: 0.5rem;border-radius: 0.25rem;font-size: 0.9rem;position: absolute;z-index: 2000;left: 30%; margin-top: 2px');
+            document.querySelector('#share-modal .content-share-modal').appendChild(newSpan);
+            setTimeout(function() {
+                newSpan.remove();
+            }, 1500)
+
+        }
+
+
+
+        function overlayModal() {
+            var overlay = document.querySelector('#modal-share .overlay').style.display = "none";
+            $('#modal-share').modal('toggle');
+        }
     </script>
+
+    <div>
+        <span>Sao chép thành công</span>
+    </div>
 
     <script async src="https://www.youtube.com/iframe_api"></script>
     <script>

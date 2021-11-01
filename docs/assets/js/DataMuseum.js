@@ -29,33 +29,17 @@ window.DataMuseum = (function() {
                                                 <button class="btn-musesum btn-musesum--primary-save"><span>Lưu</span></button>
                                             </div>
                                         </div>
-                                        <div class="d-flex card-item-bottom">
-                                            <div class="card-item-bottom_link">
-                                                <a href="#">abc.com</a>
-                                            </div>
-                                            <div class="card-item-bottom_action">
-                                                <span class="card-item-bottom_action-item rounded-circle">
-                                                    <i class="fas fa-share-alt-square"></i>
-                                                </span>
-                                                <span class="card-item-bottom_action-item rounded-circle">
-                                                    <i class="far fa-flag"></i>
-                                                </span>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
 
                                 </div>
                                 <div class="card-footer card-museum-footer">
                                     <h5 class="card-title title title-card-museum-footer">${data[indexItem]["title"]}</h5>
-                                    <div class="card-footer__bottom d-flex justify-content-between">
+                                    <div class="card-footer__bottom d-flex">
                                         <div class="pr-2 user-card d-flex align-items-center">
                                             <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
                                             <div class="user-card__avata-user rounded-circle"></div>
-                                            <span class="pl-1 user-card__name-user">Nhóm 8 có thể tên cũng dài nên cho 1 dòng thôi</span>
-                                        </div>
-                                        <div class="user-like d-flex align-items-center">
-                                            <i class="fas fa-heart pr-1 user-like_icon user-like__liked show"></i>
-                                            <span class="user-like__amount-like">100</span>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8</span>
                                         </div>
                                     </div>
                                 </div>
@@ -86,7 +70,7 @@ window.DataMuseum = (function() {
                     break;
                 case 'modal':
                     html = `
-                    <img src="${url}" class="modal-topic_img-image" data-action="zoom" />
+                    <img src="${url}" class="modal-topic_img-image"/>
                             `;
                     break;
                 default:
@@ -159,7 +143,7 @@ window.DataMuseum = (function() {
             src="https://sketchfab.com/models/${id3d}/embed"> </iframe>`;
                     break;
                 case 'modal':
-                    html = `<iframe style="border-radius: 12px;" class="w-100" height=90% title="Trống Ngọc Lũ" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                    html = `<iframe style="border-radius: 12px;height: 66vh;" class="w-100" title="Trống Ngọc Lũ" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
             src="https://sketchfab.com/models/${id3d}/embed"> </iframe>`;
                     break;
                 default:
@@ -172,15 +156,27 @@ window.DataMuseum = (function() {
     }
 
 
-    this.renderItemHTMLModal = function(modal, idItem, data) {
+    this.renderItemHTMLModal = async function(modal, idItem, data) {
         var item = data[idItem];
+        var urlShare = createLinkShare(item);
         console.log("this is modal123");
         let choiceURLFull = extUrl(item["url_full"], "modal");
         let html = `
 
-        <div class="modal-dialog modal-lg modal-dialog-centered" id="main-myModal" index-data="${idItem}">
+        <div class="modal-dialog modal-lg modal-dialog-centered" id="main-myModal" index-data="${idItem}" style="
+        overflow-y: initial !important;">
         <div class="modal-content modal-content-custom">
         <!-- bắt đầu sửa modal từ trong này....................... -->
+        <div class="d-flex justify-content-end align-items-center action-top">
+                       
+            <div class="card-item-top__save-card">
+                <button class="btn-musesum btn-musesum--primary-save" id="btn-share-modal" data-toggle="modal" href="#modal-share">Chia sẻ</button>
+            </div>
+            <div class="card-item-top__save-card ml-1">
+                <button class="btn-musesum btn-musesum--primary-save" id="save-modal">Lưu</button>
+            </div>
+                        
+        </div>
 
         <div class="row">
             <div class="col-lg-6 modal-content-custom-media">
@@ -188,44 +184,28 @@ window.DataMuseum = (function() {
             </div>
             <div class="col-lg-6 modal-content-custom-text">
                 <div class="modal-header-custom">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <div class="item-action">
-                            <span class="item-action__item rounded-circle">
-                                <i class="ti-share-alt"></i>
-                            </span>
-                            <span class="item-action__item rounded-circle">
-                                <i class="ti-flag-alt"></i>
-                            </span>
-                        </div>
+                    <!--<div class="d-flex justify-content-end align-items-center">
+                    
 
                         <div class="d-flex align-items-center">
-                            <div class="category-item pr-1">
-                                <span class="category-item__category-name">Hồ Chí Minh</span>
-                                <i class="ti-angle-double-down category-item__category-icon"></i>
+                            <div class="card-item-top__save-card">
+                                <button class="btn-musesum btn-musesum--primary-save" id="btn-share-modal" data-toggle="modal" href="#modal-share">Chia sẻ</button>
                             </div>
                             <div class="card-item-top__save-card">
-                                <button class="btn-musesum btn-musesum--primary-save"><span>Lưu</span></button>
+                                <button class="btn-musesum btn-musesum--primary-save" id="save-modal">Lưu</button>
                             </div>
                         </div>
-                    </div>
+                    </div>  -->
                     <div class="">
-                        <div class="d-flex justify-content-between align-items-center mt-2">
-                            <div class="">
-                                <a href="#">abc.com</a>
-                            </div>
-                            <div class="user-like d-flex align-items-center">
-                                <i class="fas fa-heart pr-1 user-like_icon user-like__liked show"></i>
-                                <span class="user-like__amount-like">100</span>
-                            </div>
-                        </div>
+  
                         <h3 class="title-text">${item["title"]}</h3>
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
                             <div class="pr-2 user-card d-flex align-items-center">
                                 <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
                                 <div class="user-card__avata-user rounded-circle"></div>
                                 <span class="pl-1 user-card__name-user">Nhóm 8</span>
                             </div>
-                            <button class="btn-musesum btn-musesum--primary">Theo dõi</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -233,7 +213,7 @@ window.DataMuseum = (function() {
                     <p class="text-content">
                     ${item["desc"]}
                     </p>
-
+                   
                 </div>
             </div>
         </div>
@@ -241,7 +221,32 @@ window.DataMuseum = (function() {
     </div>
     <div class="control-slide control-slide--previous" onclick="clickControlSlide('pre')"><i class="fas fa-chevron-left"></i></div>
     <div class="control-slide control-slide--next" onclick="clickControlSlide('next')"><i class="fas fa-chevron-right"></i></div>
+    
+    
+    
+    </div>
+
+
+    <div class="modal fade modal-second" id="modal-share">
+                <div class="overlay" onclick="overlayModal()"></div>
+                <div class="modal-dialog modal-dialog-centered">
+                    <div id="share-modal">
+                    <div class="content-share-modal">
+                        <label for="">Nhận đường liên kết để chia sẻ</label>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input id="input-link-share" type="text" value="${urlShare}">
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn" id="btn-copy-link" onclick="copyLinkShare()">Sao chép đường liên kết</button>
+                            </div>
+    
                         </div>
+                   
+                </div>
+                    </div>
+                </div>
+            </div>
         `;
         // let html = `
 
@@ -279,12 +284,12 @@ window.DataMuseum = (function() {
         }
     }
 
-    // function checkType(url) {
-    //     let arrPathUrl = url.split('.')[2];
-    //     if (arrPathUrl[]) {
-
-    //     }
-    // }
+    function createLinkShare(item) {
+        const myUrlWithParams = new URL(window.location.href);
+        myUrlWithParams.searchParams.set("item", item.id);
+        console.log(myUrlWithParams.href);
+        return myUrlWithParams.href;
+    }
 
     return {
         test: test,

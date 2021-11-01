@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     // bật, tắt guide
     $toastShow = $('#toast-show-guide');
     $("#guide_image-bg-1").click(
@@ -44,11 +43,11 @@ $(document).ready(function() {
             } else {
 
                 $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-                
-             
+
+
             }
-           
-           
+
+
         })
     })
 
@@ -63,11 +62,35 @@ $(document).ready(function() {
             console.log("modal mo");
             document.querySelector("#main-myModal").innerHTML = "";
         }
+        if ($("#myModal").hasClass("modal") && $("#myModal").hasClass("show")) {
+            // console.log("zooom");
+            $('#save-modal').click(function() {
+                html2canvas(document.querySelector("#main-myModal")).then(canvas => {
+                    // document.body.appendChild(canvas)
+
+                    var dataURL = canvas.toDataURL("image/png");
+                    // console.log(dataURL);
+                    var elementA = document.createElement("a");
+                    elementA.download = '';
+                    elementA.href = dataURL;
+                    elementA.click()
+                    console.log(elementA);
+                });
+                console.log('caven');
+            });
+
+            $('#btn-share-modal').click(function() {
+                console.log('click btn share');
+                document.querySelector('#modal-share .overlay').style.display = "block";
+
+            });
+
+
+            // coppy link share
+
+        }
+        // console.log("hhhhhhhhhhhhhhhhhhh");
     }
-
-
-
-
 
 
 });
