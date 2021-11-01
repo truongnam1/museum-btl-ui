@@ -19,8 +19,8 @@ window.DataMuseum = (function() {
             <div class="card card-pin shadow-lg card-lg" index-data="${indexItem}"  onclick="clickCard(${indexItem})" data-toggle="modal" data-target="#myModal">
                                 <div class="card-img">
                                     ${choiceURLFull}
-                                    <div class="img-overlay">
-                                        <div class="d-flex card-item-top">
+                                    <div class="img-overlay text-center">
+                                        <!--<div class="d-flex card-item-top">
                                             <div class="card-item-top__category-item">
                                                 <span class="category-item__category-name">Cổ vật</span>
                                                 <i class="ti-angle-double-down category-item__category-icon"></i>
@@ -28,7 +28,9 @@ window.DataMuseum = (function() {
                                             <div class="card-item-top__save-card">
                                                 <button class="btn-musesum btn-musesum--primary-save"><span>Lưu</span></button>
                                             </div>
-                                        </div>
+                                        </div> -->
+
+                                        <div class="text-white w-100 h-100" >Xem thêm >></div>
                                         
                                     </div>
 
@@ -168,7 +170,7 @@ window.DataMuseum = (function() {
         <div class="modal-content modal-content-custom">
         <!-- bắt đầu sửa modal từ trong này....................... -->
         <div class="d-flex justify-content-end align-items-center action-top">
-                       
+        <button type="button" class="close btn-close" data-dismiss="modal">×</button>
             <div class="card-item-top__save-card">
                 <button class="btn-musesum btn-musesum--primary-save" id="btn-share-modal" data-toggle="modal" href="#modal-share">Chia sẻ</button>
             </div>
@@ -229,15 +231,17 @@ window.DataMuseum = (function() {
 
     <div class="modal fade modal-second" id="modal-share">
                 <div class="overlay" onclick="overlayModal()"></div>
-                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
                     <div id="share-modal">
+                    
                     <div class="content-share-modal">
+                    <button type="button" class="close btn-close" data-dismiss="modal">×</button>
                         <label for="">Nhận đường liên kết để chia sẻ</label>
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <input id="input-link-share" type="text" value="${urlShare}">
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-4 d-flex justify-content-end">
                                 <button class="btn" id="btn-copy-link" onclick="copyLinkShare()">Sao chép đường liên kết</button>
                             </div>
     

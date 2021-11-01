@@ -85,9 +85,6 @@ $(document).ready(function() {
 
             });
 
-
-            // coppy link share
-
         }
         // console.log("hhhhhhhhhhhhhhhhhhh");
     }
