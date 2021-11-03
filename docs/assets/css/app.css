@@ -1,14 +1,16 @@
 body {
-    background-color: var(--musesum-bg-body);
+  background-color: var(--musesum-bg-body);
 }
 
 .container {
-    margin-top: 5.5rem;
+  margin-top: 5.5rem;
 }
 
 #navbar-category {
-    overflow: hidden;
+  overflow: hidden;
 }
-
+.modal-backdrop {
+  z-index: 10;
+}
 
 /* ca */
