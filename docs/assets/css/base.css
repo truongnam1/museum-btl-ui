@@ -115,7 +115,7 @@ body {
   background-color: whitesmoke;
   border: none;
   border-radius: 50px;
-  box-shadow: 3px 3px 2px #dee2e6, 0em -2px 0em 0px #dee2e6;
+  padding: 0;
 }
 .guide .button_introduction:hover {
   background-color: whitesmoke;
