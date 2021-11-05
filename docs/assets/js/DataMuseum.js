@@ -235,7 +235,7 @@ window.DataMuseum = (function() {
                     <div id="share-modal">
                     
                     <div class="content-share-modal">
-                    <button type="button" class="close btn-close" data-dismiss="modal">×</button>
+                    <button type="button" class="close btn-close" onclick="handleCloseShareModal()">×</button>
                         <label for="">Nhận đường liên kết để chia sẻ</label>
                         <div class="row">
                             <div class="col-md-8">

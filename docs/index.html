@@ -614,8 +614,17 @@ Theo nhà báo – học giả Quang Đạm, hai chữ "cách mệnh" từ Trung
                 border: "1px solid black"
             });
 
+            const turnOffShareModal = $( ".modal-backdrop.fade" );
+            if(turnOffShareModal.hasClass('show')) turnOffShareModal.remove()
 
 
+        }
+
+        const handleCloseShareModal = () => {
+             $('#modal-share').removeClass('show')
+             $(".modal-backdrop.fade" ).remove();
+             this.overlayModal();
+           
         }
 
         var isNumber = function isNumber(value) {
