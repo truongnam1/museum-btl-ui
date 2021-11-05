@@ -10,7 +10,7 @@ body {
   overflow: hidden;
 }
 .modal-backdrop {
-  z-index: 10;
+  z-index: 1049;
 }
 
 /* ca */
