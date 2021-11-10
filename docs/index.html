@@ -37,27 +37,32 @@
     <!-- zoom2 -->
     <link rel="stylesheet" href="./assets/css/compoment/zoom.css">
 
+    <!-- toast -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <script>
+        var dataGuide = {
+            'imageIntroduction': `./assets/image/co-gai.png`,
+            'dataBody': {
+                'cardGuide': {
+                    'url': `./assets/image/xem-them (1).png`,
+                    'text': `Bấm xem thêm để đọc thêm thông tin chi tiết`,
+                },
+                '3dGuide': {
+                    'url': `./assets/image/3d.png`,
+                    'text': `Giữ và kéo để xoay vật thể 3D`,
+                },
+                'zoomGuide': {
+                    'url': `./assets/image/zoom.png`,
+                    'text': `Di chuột vào ảnh để xem chi tiết`,
+                },
+            }
+        };
+    </script>
+
 </head>
 
 <body>
-    <!-- <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
-            <a class="navbar-brand font-weight-bolder mr-3" href="index.html"><img src="assets/image/logo.png"></a>
-            <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarsDefault">
-                <ul class="navbar-nav mr-auto align-items-center">
-                    <form class="bd-search hidden-sm-down" id="header-search-form">
-                        <input type="text" class="form-control border-0 font-weight-bold" id="search-input" placeholder="Tìm kiếm..." autocomplete="off">
-                        <div class="dropdown-menu bd-search-results" id="search-results">
-                        </div>
-                    </form>
-                </ul>
-            </div>
-        </nav>
-    </header> -->
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
@@ -90,65 +95,6 @@
 
         <div class="main">
             <!-- navbar category -->
-            <!-- <section>
-                <div class="row mb-1 mt-1">
-
-                    <nav class="navbar navbar-expand navbar-light bg-navbar-museum pl-2 pr-2 mw-100">
-                        <div class="collapse navbar-collapse" id="navbar-category">
-
-                            <a href="#" class="nav-control__prev">
-                                <i class="ti-angle-double-left"></i>
-                            </a>
-                            <a href="#" class="nav-control__next">
-                                <i class="ti-angle-double-right"></i>
-                            </a>
-
-                            <ul class="navbar-nav">
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link my-auto" href="#">Tất cả</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link my-auto" href="modal.html">Cổ vật</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary-active mr-2 nav-item-category">
-                                    <a class="nav-link my-auto" href="#">Nhà Nguyễn</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồoooo o o o</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Vua Hùng</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Triệu</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </section> -->
 
             <!-- item -->
             <section>
@@ -174,135 +120,94 @@
             <section>
                 <div class="guide">
                     <!-- <div class="guide_image-bg" id="guide_image-bg-1"> -->
-                      
-                    <!-- </div> -->
-                    
 
+                    <!-- </div> -->
 
                     <button type="button" class="btn btn-primary button_introduction" data-toggle="modal" data-target="#exampleModalCenter1">
                         <i class="fas fa-question guide_image-bg-icon"></i>
                       </button>
-                      
-                      <!-- Modal -->
-                      <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-content_introduction" role="document">
-                            <img src="./assets/image/co-gai.png" class="girl_introduction"/>
-                          <div class="modal-content">
 
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-content_introduction" role="document">
+                            <img src="./assets/image/co-gai.png" class="girl_introduction" />
+                            <div class="modal-content">
+
+                                <!-- <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
-                            </div>
-                            
-                            <div class="modal-body">
-                                <div class="modal-body_introduction">
-                                    <div class="row pc_introduction">
-                                        <div class="col-xl-3 col-lg-3">
-                                            <img src="./assets/image/xem-them (1).png" alt="">
-                                            <h3>Bấm xem thêm để đọc thêm thông tin chi tiết</h3>
-                                        </div>
+                                </div> -->
 
-                                        <div class="col-xl-3 col-lg-3">
-                                            <img src="./assets/image/3d.png" alt="">
-                                            <h3>Giữ và kéo để xoay vật thể 3D</h3>
-                                        </div>
-
-                                        <div class="col-xl-3 col-lg-3">
-                                            <img src="./assets/image/zoom.png" alt="">
-                                            <h3>Di chuột vào ảnh để xem chi tiết</h3>
-                                        </div>
-                                        
-                                        
-                                    </div>
-
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                        <ol class="carousel-indicators">
-                                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                        </ol>
-                                        <div class="carousel-inner row">
-                                          <div class="carousel-item active ">
-                                              <div class="col-12 col-sm-12 col-md-12">
+                                <div class="modal-body">
+                                    <div class="modal-body_introduction">
+                                        <div class="row pc_introduction">
+                                            <div class="col-xl-3 col-lg-3">
                                                 <img src="./assets/image/xem-them (1).png" alt="">
                                                 <h3>Bấm xem thêm để đọc thêm thông tin chi tiết</h3>
-                                              </div>
-                                          </div>
-                                           <div class="carousel-item">
-                                            <div class="col-12 col-sm-12 col-md-12">
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-3">
                                                 <img src="./assets/image/3d.png" alt="">
                                                 <h3>Giữ và kéo để xoay vật thể 3D</h3>
                                             </div>
-                                        </div>
 
-                                        <div class="carousel-item">
-                                            <div class="col-12 col-md-12">
+                                            <div class="col-xl-3 col-lg-3">
                                                 <img src="./assets/image/zoom.png" alt="">
                                                 <h3>Di chuột vào ảnh để xem chi tiết</h3>
                                             </div>
                                         </div>
+
+                                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                            </ol>
+                                            <div class="carousel-inner row">
+                                                <div class="carousel-item active ">
+                                                    <div class="col-12 col-sm-12 col-md-12">
+                                                        <img src="./assets/image/xem-them (1).png" alt="">
+                                                        <h3>Bấm xem thêm để đọc thêm thông tin chi tiết</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-12 col-sm-12 col-md-12">
+                                                        <img src="./assets/image/3d.png" alt="">
+                                                        <h3>Giữ và kéo để xoay vật thể 3D</h3>
+                                                    </div>
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <div class="col-12 col-md-12">
+                                                        <img src="./assets/image/zoom.png" alt="">
+                                                        <h3>Di chuột vào ảnh để xem chi tiết</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
                                         </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                          <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                          <span class="sr-only">Next</span>
-                                        </a>
-                                      </div>
+                                    </div>
                                 </div>
+
                             </div>
-                            
-                          </div>
                         </div>
-                      </div>
-                   
-
-                    <!-- <div class="toast guide__show" data-autohide="false" id="toast-show-guide">
-                        <div class="toast-header" id="header-guide-show">
-                            <strong class="mr-auto guide__show-title">Đến trung tâm trợ giúp</strong>
-
-                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" id="btn-close-guide">&times;</button>
-                        </div>
-                        <div class="toast-body guide__show-content">
-                            <ul class="guide__show-list-content">
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông aaaaaaaaaaaaaaaaaaatin</a></li>
-
-
-
-
-
-                            </ul>
-                        </div>
-                    </div> -->
-
+                    </div>
                 </div>
             </section>
 
         </div>
 
         <!-- modal -->
-        
+
         <section>
             <div class="container">
                 <!-- The Modal -->
@@ -316,12 +221,6 @@
             </div>
         </section>
 
-        
-
-
-
-
-
     </div>
 
     <!-- Optional JavaScript -->
@@ -331,6 +230,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 
     <script src="./assets/js/main.js"></script>
@@ -531,154 +431,7 @@ Theo nhà báo – học giả Quang Đạm, hai chữ "cách mệnh" từ Trung
         }
 
         DataMuseum.renderItemHTMLCard(cols, arrItem.images);
-
-
-
-        function clickCard(idItem) {
-            console.log('click card ' + idItem);
-            // $('#cardYTB-DwyzrcRw0EI')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-            DataMuseum.renderItemHTMLModal(modal, idItem, arrItem.images);
-            $(document).ready(function() {
-                $('img.modal-topic_img-image').okzoom({
-                    width: 200,
-                    height: 200,
-                    scaleWidth: 800,
-                    round: true,
-                    background: "#fff",
-                    // backgroundRepeat: "repeat",
-                    shadow: "0 0 5px #000",
-                    border: "1px solid black"
-                });
-
-                $('#data_fetch video').each(function() {
-
-                    $(this)[0].pause();
-
-                })
-
-                $('iframe').each(function() {
-                    if ($(this).is(":in-viewport")) {
-                        $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-                    }
-                })
-
-
-                $('#myModal').on('hidden.bs.modal', function() {
-
-
-                    $('video').each(function() {
-                        if ($(this).is(":in-viewport")) {
-                            $(this)[0].play();
-                        } else {
-                            $(this)[0].pause();
-                        }
-
-                        $('#myModal video').each(function() {
-                            $(this)[0].pause();
-                        })
-
-
-                    })
-
-                    $('iframe').each(function() {
-                        if ($(this).is(":in-viewport")) {
-                            $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-                        }
-                    })
-                })
-            })
-
-
-        }
-
-        function clickControlSlide(control) {
-            // $('#ok-lorgnette').css()
-            $("#ok-lorgnette").css("display", "none");
-            var index = parseInt($("#main-myModal").attr("index-data"));
-            if (arrItem && arrItem.images.length > 1 && isNumber(index)) {
-                console.log("click control\n" + "index : " + index);
-                console.log("control:" + control);
-                DataMuseum.controlSlideItem(modal, index, arrItem.images, control);
-            } else {
-                console.log("loi j do ve control");
-            }
-
-            $('img.modal-topic_img-image').okzoom({
-                width: 200,
-                height: 200,
-                scaleWidth: 800,
-                round: true,
-                background: "#fff",
-                // backgroundRepeat: "repeat",
-                shadow: "0 0 5px #000",
-                border: "1px solid black"
-            });
-
-            const turnOffShareModal = $( ".modal-backdrop.fade" );
-            if(turnOffShareModal.hasClass('show')) turnOffShareModal.remove()
-
-
-        }
-
-        const handleCloseShareModal = () => {
-             $('#modal-share').removeClass('show')
-             $(".modal-backdrop.fade" ).remove();
-             this.overlayModal();
-           
-        }
-
-        var isNumber = function isNumber(value) {
-            return typeof value === 'number' && isFinite(value);
-        }
-
-        document.onkeyup = function(e) {
-            if ($("#myModal").hasClass("modal") && $("#myModal").hasClass("show")) {
-                if (event.key == "ArrowRight") {
-                    clickControlSlide("next");
-                    console.log("phải");
-                } else if (event.key == "ArrowLeft") {
-                    clickControlSlide("pre");
-                    console.log("trái");
-
-                }
-            }
-            console.log(e);
-        }
-
-        // copy link share
-        function copyLinkShare() {
-            /* Get the text field */
-            var copyText = document.getElementById("input-link-share");
-
-            /* Select the text field */
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); /* For mobile devices */
-
-            /* Copy the text inside the text field */
-            navigator.clipboard.writeText(copyText.value);
-
-            /* Alert the copied text */
-            console.log("Copied the text: " + copyText.value);
-
-            var html = `Sao chép thành công`;
-            const newSpan = document.createElement("span");
-            newSpan.innerHTML = html;
-            newSpan.setAttribute('style', 'color: #fff;background-color: #000;opacity: 0.8;padding: 0.5rem;border-radius: 0.25rem;font-size: 0.9rem;position: absolute;z-index: 2000;left: 45%; margin-top: 2px');
-            document.querySelector('#share-modal .content-share-modal').appendChild(newSpan);
-            setTimeout(function() {
-                newSpan.remove();
-            }, 1500)
-
-        }
-        function overlayModal() {
-            var overlay = document.querySelector('#modal-share .overlay').style.display = "none";
-            $('#modal-share').modal('toggle');
-        }
     </script>
-
-    <!-- <div>
-        <span>Sao chép thành công</span>
-    </div> -->
 
     <script async src="https://www.youtube.com/iframe_api"></script>
     <script>

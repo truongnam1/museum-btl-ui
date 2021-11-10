@@ -1,192 +1,196 @@
 /* card */
 
 .card-pin {
-  background-color: transparent;
-  /* border: none; */
+    background-color: transparent;
+    cursor: pointer;
+    /* border: none; */
 }
+
 
 /* overlay */
 
-div.card-img {
-}
+div.card-img {}
 
 div.card-img:hover .img-overlay {
-  display: block;
+    display: block;
 }
 
 .img-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  background-color: rgba(0, 0, 0, 0.28);
-  display: none;
-  animation: fadeInOverlay ease 1s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.28);
+    display: none;
+    animation: fadeInOverlay ease 1s;
 }
 
 .img-overlay .text-white {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .img-overlay .text-white span {
-  align-self: center;
-  flex: 1;
+    align-self: center;
+    flex: 1;
 }
+
 
 /* card footer */
 
 .card-museum-footer {
-  padding-left: 10px;
-  padding-right: 10px;
-  background-color: transparent;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: transparent;
 }
 
 .title-card-museum-footer {
-  font-size: 1.1rem;
-  overflow: hidden;
-  display: block;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+    font-size: 1.1rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
-.museum-card-img {
-}
+.museum-card-img {}
 
 .user-card__avata-user {
-  width: 40px;
-  height: 40px;
-  padding-left: 40px;
-  background-image: url(https://i.ibb.co/0Ywq6vK/Bot-avt.png);
-  background-color: aliceblue;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  /* object-fit: contain; */
+    width: 40px;
+    height: 40px;
+    padding-left: 40px;
+    background-image: url(https://i.ibb.co/0Ywq6vK/Bot-avt.png);
+    background-color: aliceblue;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    /* object-fit: contain; */
 }
 
 .user-card__avata-image {
-  height: 35px;
-  margin: 0 auto;
+    height: 35px;
+    margin: 0 auto;
 }
 
 .user-card__name-user {
-  font-size: 0.9rem;
-  font-weight: 500;
-  overflow: hidden;
-  display: block;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+    font-size: 0.9rem;
+    font-weight: 500;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
 }
 
 .user-like {
-  font-size: 0.9rem;
-  line-height: 1rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
 }
 
 .user-like_icon {
-  font-size: 0.84rem;
-  margin-top: 3px;
-  cursor: pointer;
-  display: none;
-  color: red;
+    font-size: 0.84rem;
+    margin-top: 3px;
+    cursor: pointer;
+    display: none;
+    color: red;
 }
 
 .user-like_icon.show {
-  display: block;
+    display: block;
 }
+
 
 /* card item top */
 
 .card-item-top {
-  position: absolute;
-  top: 10px;
-  width: 100%;
-  padding: 10px 10px 0 10px;
-  justify-content: space-between;
-  color: var(--musesum-text-color-white);
-  align-items: center;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    padding: 10px 10px 0 10px;
+    justify-content: space-between;
+    color: var(--musesum-text-color-white);
+    align-items: center;
 }
 
 .card-item-top__category-item {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .category-item__category-icon {
-  font-size: 0.7rem;
+    font-size: 0.7rem;
 }
+
 
 /* card item bottom */
 
 .card-img {
-  position: relative;
+    position: relative;
 }
 
 .card-item-bottom {
-  font-size: 1rem;
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
-  color: var(--musesum-text-color-white);
-  justify-content: space-between;
-  padding: 10px;
+    font-size: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    color: var(--musesum-text-color-white);
+    justify-content: space-between;
+    padding: 10px;
 }
 
 .card-item-bottom_link {
-  border-radius: 24px;
-  padding: 0 12px;
-  margin-top: 4px;
+    border-radius: 24px;
+    padding: 0 12px;
+    margin-top: 4px;
 }
 
-.card-item-bottom_link > a {
-  color: var(--musesum-text-color-white);
-  text-decoration: none;
+.card-item-bottom_link>a {
+    color: var(--musesum-text-color-white);
+    text-decoration: none;
 }
 
 .card-item-bottom_action-item {
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  margin-left: 5px;
-  /* padding: 8px; */
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    font-size: 1rem;
+    margin-left: 5px;
+    /* padding: 8px; */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
-.card-item-bottom_action-item > i {
-  /* margin: 0 auto; */
+.card-item-bottom_action-item>i {
+    /* margin: 0 auto; */
 }
 
 .card-item-bottom_action-item:hover {
-  background-color: rgba(240, 248, 255, 0.3);
-  animation: fadeInHoverItemCard ease-in 0.3s;
-  /* border-radius: 50%; */
+    background-color: rgba(240, 248, 255, 0.3);
+    animation: fadeInHoverItemCard ease-in 0.3s;
+    /* border-radius: 50%; */
 }
 
 .card-item-bottom_link:hover {
-  background-color: rgba(240, 248, 255, 0.3);
-  animation: fadeInHoverItemCard ease-in 0.3s;
+    background-color: rgba(240, 248, 255, 0.3);
+    animation: fadeInHoverItemCard ease-in 0.3s;
 }
 
 @keyframes fadeInHoverItemCard {
-  from {
-    background-color: rgba(240, 248, 255, 0.1);
-  }
-  to {
-    background-color: rgba(240, 248, 255, 0.3);
-  }
+    from {
+        background-color: rgba(240, 248, 255, 0.1);
+    }
+    to {
+        background-color: rgba(240, 248, 255, 0.3);
+    }
 }
 
 @keyframes fadeInOverlay {
-  from {
-    background-color: rgba(0, 0, 0, 0.1);
-    opacity: 0.5;
-  }
-  to {
-    background-color: rgba(0, 0, 0, 0.28);
-    opacity: 1;
-  }
+    from {
+        background-color: rgba(0, 0, 0, 0.1);
+        opacity: 0.5;
+    }
+    to {
+        background-color: rgba(0, 0, 0, 0.28);
+        opacity: 1;
+    }
 }

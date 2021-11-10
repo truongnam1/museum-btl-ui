@@ -175,7 +175,7 @@ window.DataMuseum = (function() {
                 <button class="btn-musesum btn-musesum--primary-save" id="btn-share-modal" data-toggle="modal" href="#modal-share">Chia sẻ</button>
             </div>
             <div class="card-item-top__save-card ml-1">
-                <button class="btn-musesum btn-musesum--primary-save" id="save-modal">Lưu</button>
+                <button class="btn-musesum btn-musesum--primary-save" id="save-modal" onclick="clickSaveModal()">Lưu</button>
             </div>
                         
         </div>
@@ -239,7 +239,7 @@ window.DataMuseum = (function() {
                         <label for="">Nhận đường liên kết để chia sẻ</label>
                         <div class="row">
                             <div class="col-md-8">
-                                <input id="input-link-share" type="text" value="${urlShare}">
+                                <input id="input-link-share" type="text" value="${urlShare}" disabled>
                             </div>
                             <div class="col-md-4 d-flex justify-content-end">
                                 <button class="btn" id="btn-copy-link" onclick="copyLinkShare()">Sao chép đường liên kết</button>
