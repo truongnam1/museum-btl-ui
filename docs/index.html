@@ -82,7 +82,7 @@
                     </form> -->
 
                     <li>
-                        <h4>Hiện vật bảo tàng</h4>
+                        <h4 id="title-main">Hiện vật bảo tàng</h4>
                         <p><strong>Tác giả:</strong> <i style="
                             font-size: 0.9rem;
                         ">Theo Bao Chẩn (người không có bất kỳ mối liên hệ nào đến B Ray)</i></p>
@@ -664,6 +664,38 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+    </script>
+
+    <script>
+        function log(txt, index) {
+            console.log(`Tiêu đề ${index} : <b>" + ${txt} + "</b> px`)
+        }
+
+        $(function() {
+
+            var eTop0 = $('#title-list-card-0').offset().top; //get the offset top of the element
+            var eTop1 = $('#title-list-card-1').offset().top; //get the offset top of the element
+
+
+            log(eTop0 - $(window).scrollTop()); //position of the ele w.r.t window
+            log(eTop1 - $(window).scrollTop()); //position of the ele w.r.t window
+
+
+            $(window).scroll(function() { //when window is scrolled
+                log(eTop0 - $(window).scrollTop(), '0');
+                log(eTop1 - $(window).scrollTop(), '1');
+                var h0 = eTop0 - $(window).scrollTop();
+                var h1 = eTop1 - $(window).scrollTop();
+
+                if (Math.abs(h0) > Math.abs(h1)) {
+                    $('#title-main').text('tiêu đề 1')
+                } else {
+                    $('#title-main').text('tiêu đề 2')
+
+                }
+
+            });
+        });
     </script>
 
 </body>
