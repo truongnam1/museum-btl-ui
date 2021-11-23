@@ -17,7 +17,8 @@ window.DataMuseum = (function() {
             let choiceURLFull = extUrl(data[indexItem]["url_full"], "card");
 
             var html = `
-            <div class="card card-pin shadow-lg card-lg" index-data="${indexItem}" index-topic="${indexTopic}" onclick="clickCard(${indexItem},${indexTopic})" data-toggle="modal" data-target="#myModal">
+            <div class="card card-pin shadow-lg card-lg" index-data="${indexItem}" index-topic="${indexTopic}" onclick="clickCard(${indexItem},${indexTopic})" 
+            data-toggle="modal" data-target="#myModal" data-aos="fade-up" data-aos-duration="${(indexItem % 4)*600 + 500*(Math.floor((indexItem%8)/4) + 1) + 200}">
                                 <div class="card-img">
                                     ${choiceURLFull}
                                     <div class="img-overlay text-center">
