@@ -37,27 +37,33 @@
     <!-- zoom2 -->
     <link rel="stylesheet" href="./assets/css/compoment/zoom.css">
 
+    <!-- toast -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script>
+        var dataGuide = {
+            'imageIntroduction': `./assets/image/co-gai.png`,
+            'dataBody': {
+                'cardGuide': {
+                    'url': `./assets/image/xem-them (1).png`,
+                    'text': `Bấm xem thêm để đọc thêm thông tin chi tiết`,
+                },
+                '3dGuide': {
+                    'url': `./assets/image/3d.png`,
+                    'text': `Giữ và kéo để xoay vật thể 3D`,
+                },
+                'zoomGuide': {
+                    'url': `./assets/image/zoom.png`,
+                    'text': `Di chuột vào ảnh để xem chi tiết`,
+                },
+            }
+        };
+    </script>
+
 </head>
 
 <body>
-    <!-- <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
-            <a class="navbar-brand font-weight-bolder mr-3" href="index.html"><img src="assets/image/logo.png"></a>
-            <button class="navbar-light navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsDefault" aria-controls="navbarsDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarsDefault">
-                <ul class="navbar-nav mr-auto align-items-center">
-                    <form class="bd-search hidden-sm-down" id="header-search-form">
-                        <input type="text" class="form-control border-0 font-weight-bold" id="search-input" placeholder="Tìm kiếm..." autocomplete="off">
-                        <div class="dropdown-menu bd-search-results" id="search-results">
-                        </div>
-                    </form>
-                </ul>
-            </div>
-        </nav>
-    </header> -->
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
@@ -90,80 +96,151 @@
 
         <div class="main">
             <!-- navbar category -->
-            <!-- <section>
-                <div class="row mb-1 mt-1">
-
-                    <nav class="navbar navbar-expand navbar-light bg-navbar-museum pl-2 pr-2 mw-100">
-                        <div class="collapse navbar-collapse" id="navbar-category">
-
-                            <a href="#" class="nav-control__prev">
-                                <i class="ti-angle-double-left"></i>
-                            </a>
-                            <a href="#" class="nav-control__next">
-                                <i class="ti-angle-double-right"></i>
-                            </a>
-
-                            <ul class="navbar-nav">
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link my-auto" href="#">Tất cả</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link my-auto" href="modal.html">Cổ vật</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary-active mr-2 nav-item-category">
-                                    <a class="nav-link my-auto" href="#">Nhà Nguyễn</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồoooo o o o</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Hồ</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Vua Hùng</a>
-                                </li>
-                                <li class="nav-item btn-musesum btn-musesum--primary mr-2 nav-item-category">
-                                    <a class="nav-link mx-auto" href="#">Nhà Triệu</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </section> -->
 
             <!-- item -->
-            <section>
+            <section style="display: none;">
+                <div class="title-list-card" id="title-list-card-1">
+                    <h3 class="d-flex justify-content-center">Tiêu đề số 1</h3>
+                </div>
                 <div class="card-columns d-flex">
                     <div class="row" id="data_fetch">
                         <div class="col-sm-12 col-md-6 col-lg-3" id="column1">
+                            <div class="card card-pin shadow-lg card-lg" index-data="8" onclick="clickCard(8)" data-toggle="modal" data-target="#myModal">
+                                <div class="card-img">
+
+                                    <iframe id="cardYTB-jAof9fDT_bM" class="mw-100" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/jAof9fDT_bM?mute=1&amp;autoplay=1&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;loop=1&amp;fs=0&amp;cc_load_policy=0&amp;iv_load_policy=3&amp;autohide=0&amp;enablejsapi=1&amp;widgetid=1&amp;playlist=jAof9fDT_bM"></iframe>
+
+                                    <div class="img-overlay text-center">
+
+
+                                        <div class="text-white w-100 h-100"><span>Xem thêm &gt;&gt;</span></div>
+
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">jAof9fDT_bM</h5>
+                                    <div class="card-footer__bottom d-flex">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-sm-12 col-md-6 col-lg-3" id="column2">
+                            <div class="card card-pin shadow-lg card-lg" index-data="5" onclick="clickCard(5)" data-toggle="modal" data-target="#myModal">
+                                <div class="card-img">
+                                    <img src="https://hcloud.trealet.com/albums/Nhom08/Data/album1/Ch-nh-i-n-c-a-Th-i-T-.jpg" class="card-img" alt="Card image">
+                                    <div class="img-overlay text-center">
+
+                                        <div class="text-white w-100 h-100"><span>Xem thêm &gt;&gt;</span></div>
+
+                                    </div>
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Chánh điện của Thái Tổ</h5>
+                                    <div class="card-footer__bottom d-flex">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card card-pin shadow-lg card-lg" index-data="5" onclick="clickCard(5)" data-toggle="modal" data-target="#myModal">
+                                <div class="card-img">
+                                    <img src="https://hcloud.trealet.com/albums/Nhom08/Data/album1/Ch-nh-i-n-c-a-Th-i-T-.jpg" class="card-img" alt="Card image">
+                                    <div class="img-overlay text-center">
+
+                                        <div class="text-white w-100 h-100"><span>Xem thêm &gt;&gt;</span></div>
+
+                                    </div>
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Chánh điện của Thái Tổ</h5>
+                                    <div class="card-footer__bottom d-flex">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-sm-12 col-md-6 col-lg-3" id="column3">
+                            <div class="card card-pin shadow-lg card-lg" index-data="14" onclick="clickCard(14)" data-toggle="modal" data-target="#myModal">
+                                <div class="card-img">
+                                    <img src="https://hcloud.trealet.com/albums/Nhom08/Data/album1/thumb_660_e2482e05-ab89-41f4-931c-bd7e66771923.jpeg" class="card-img" alt="Card image">
+                                    <div class="img-overlay text-center">
+                                        <!--<div class="d-flex card-item-top">
+                                            <div class="card-item-top__category-item">
+                                                <span class="category-item__category-name">Cổ vật</span>
+                                                <i class="ti-angle-double-down category-item__category-icon"></i>
+                                            </div>
+                                            <div class="card-item-top__save-card">
+                                                <button class="btn-musesum btn-musesum--primary-save"><span>Lưu</span></button>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="text-white w-100 h-100"><span>Xem thêm &gt;&gt;</span></div>
+
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đường cách mệnh</h5>
+                                    <div class="card-footer__bottom d-flex">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-sm-12 col-md-6 col-lg-3" id="column4">
+
+
+                            <div class="card card-pin shadow-lg card-lg" index-data="15" onclick="clickCard(15)" data-toggle="modal" data-target="#myModal">
+                                <div class="card-img">
+                                    <img src="https://hcloud.trealet.com/albums/Nhom08/Data/album1/trong-dong-dong-son-1.jpg" class="card-img" alt="Card image">
+                                    <div class="img-overlay text-center">
+                                        <!--<div class="d-flex card-item-top">
+                                            <div class="card-item-top__category-item">
+                                                <span class="category-item__category-name">Cổ vật</span>
+                                                <i class="ti-angle-double-down category-item__category-icon"></i>
+                                            </div>
+                                            <div class="card-item-top__save-card">
+                                                <button class="btn-musesum btn-musesum--primary-save"><span>Lưu</span></button>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="text-white w-100 h-100"><span>Xem thêm &gt;&gt;</span></div>
+
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Trống Đồng Đông Sơn</h5>
+                                    <div class="card-footer__bottom d-flex">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -171,138 +248,228 @@
 
             </section>
 
+            <section class="mr-2" style="display: none;">
+                <div class="title-list-card" id="title-list-card-2">
+                    <h3 class="d-flex justify-content-center">Tiêu đề số 2</h3>
+                </div>
+                <div class="card-columns d-flex">
+                    <div class="row" id="data_fetch">
+                        <div class="col-sm-12 col-md-6 col-lg-3" id="column1">
+                            <div class="card card-pin shadow-lg card-lg" index-data="8" onclick="clickCard(8)" data-toggle="modal" data-target="#myModal">
+                                <div class="card-img">
+
+                                    <iframe id="cardYTB-jAof9fDT_bM" class="mw-100" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" src="https://www.youtube.com/embed/jAof9fDT_bM?mute=1&amp;autoplay=1&amp;controls=0&amp;showinfo=0&amp;modestbranding=1&amp;loop=1&amp;fs=0&amp;cc_load_policy=0&amp;iv_load_policy=3&amp;autohide=0&amp;enablejsapi=1&amp;widgetid=1&amp;playlist=jAof9fDT_bM"></iframe>
+
+                                    <div class="img-overlay text-center">
+
+
+                                        <div class="text-white w-100 h-100"><span>Xem thêm &gt;&gt;</span></div>
+
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">jAof9fDT_bM</h5>
+                                    <div class="card-footer__bottom d-flex">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-3" id="column2">
+
+
+                            <div class="card card-pin shadow-lg card-lg" index-data="5" onclick="clickCard(5)" data-toggle="modal" data-target="#myModal">
+                                <div class="card-img">
+                                    <img src="https://hcloud.trealet.com/albums/Nhom08/Data/album1/Ch-nh-i-n-c-a-Th-i-T-.jpg" class="card-img" alt="Card image">
+                                    <div class="img-overlay text-center">
+
+                                        <div class="text-white w-100 h-100"><span>Xem thêm &gt;&gt;</span></div>
+
+                                    </div>
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Chánh điện của Thái Tổ</h5>
+                                    <div class="card-footer__bottom d-flex">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-3" id="column3">
+                            <div class="card card-pin shadow-lg card-lg" index-data="14" onclick="clickCard(14)" data-toggle="modal" data-target="#myModal">
+                                <div class="card-img">
+                                    <img src="https://hcloud.trealet.com/albums/Nhom08/Data/album1/thumb_660_e2482e05-ab89-41f4-931c-bd7e66771923.jpeg" class="card-img" alt="Card image">
+                                    <div class="img-overlay text-center">
+                                        <!--<div class="d-flex card-item-top">
+                                            <div class="card-item-top__category-item">
+                                                <span class="category-item__category-name">Cổ vật</span>
+                                                <i class="ti-angle-double-down category-item__category-icon"></i>
+                                            </div>
+                                            <div class="card-item-top__save-card">
+                                                <button class="btn-musesum btn-musesum--primary-save"><span>Lưu</span></button>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="text-white w-100 h-100"><span>Xem thêm &gt;&gt;</span></div>
+
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Đường cách mệnh</h5>
+                                    <div class="card-footer__bottom d-flex">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12 col-md-6 col-lg-3" id="column4">
+
+
+                            <div class="card card-pin shadow-lg card-lg" index-data="15" onclick="clickCard(15)" data-toggle="modal" data-target="#myModal">
+                                <div class="card-img">
+                                    <img src="https://hcloud.trealet.com/albums/Nhom08/Data/album1/trong-dong-dong-son-1.jpg" class="card-img" alt="Card image">
+                                    <div class="img-overlay text-center">
+                                        <!--<div class="d-flex card-item-top">
+                                            <div class="card-item-top__category-item">
+                                                <span class="category-item__category-name">Cổ vật</span>
+                                                <i class="ti-angle-double-down category-item__category-icon"></i>
+                                            </div>
+                                            <div class="card-item-top__save-card">
+                                                <button class="btn-musesum btn-musesum--primary-save"><span>Lưu</span></button>
+                                            </div>
+                                        </div> -->
+
+                                        <div class="text-white w-100 h-100"><span>Xem thêm &gt;&gt;</span></div>
+
+                                    </div>
+
+                                </div>
+                                <div class="card-footer card-museum-footer">
+                                    <h5 class="card-title title title-card-museum-footer">Trống Đồng Đông Sơn</h5>
+                                    <div class="card-footer__bottom d-flex">
+                                        <div class="pr-2 user-card d-flex align-items-center">
+                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                            <div class="user-card__avata-user rounded-circle"></div>
+                                            <span class="pl-1 user-card__name-user">Nhóm 8</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- hết -->
             <section>
                 <div class="guide">
                     <!-- <div class="guide_image-bg" id="guide_image-bg-1"> -->
-                      
-                    <!-- </div> -->
-                    
 
+                    <!-- </div> -->
 
                     <button type="button" class="btn btn-primary button_introduction" data-toggle="modal" data-target="#exampleModalCenter1">
                         <i class="fas fa-question guide_image-bg-icon"></i>
                       </button>
-                      
-                      <!-- Modal -->
-                      <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-content_introduction" role="document">
-                            <img src="./assets/image/co-gai.png" class="girl_introduction"/>
-                          <div class="modal-content">
 
-                            <div class="modal-header">
-                              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-content_introduction" role="document">
+                            <img src="./assets/image/co-gai.png" class="girl_introduction" />
+                            <div class="modal-content">
+
+                                <!-- <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                               </button>
-                            </div>
-                            
-                            <div class="modal-body">
-                                <div class="modal-body_introduction">
-                                    <div class="row pc_introduction">
-                                        <div class="col-xl-3 col-lg-3">
-                                            <img src="./assets/image/xem-them (1).png" alt="">
-                                            <h3>Bấm xem thêm để đọc thêm thông tin chi tiết</h3>
-                                        </div>
+                                </div> -->
 
-                                        <div class="col-xl-3 col-lg-3">
-                                            <img src="./assets/image/3d.png" alt="">
-                                            <h3>Giữ và kéo để xoay vật thể 3D</h3>
-                                        </div>
-
-                                        <div class="col-xl-3 col-lg-3">
-                                            <img src="./assets/image/zoom.png" alt="">
-                                            <h3>Di chuột vào ảnh để xem chi tiết</h3>
-                                        </div>
-                                        
-                                        
-                                    </div>
-
-                                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                                        <ol class="carousel-indicators">
-                                          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                                          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                                          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                                        </ol>
-                                        <div class="carousel-inner row">
-                                          <div class="carousel-item active ">
-                                              <div class="col-12 col-sm-12 col-md-12">
+                                <div class="modal-body">
+                                    <div class="modal-body_introduction">
+                                        <div class="row pc_introduction">
+                                            <div class="col-xl-3 col-lg-3">
                                                 <img src="./assets/image/xem-them (1).png" alt="">
                                                 <h3>Bấm xem thêm để đọc thêm thông tin chi tiết</h3>
-                                              </div>
-                                          </div>
-                                           <div class="carousel-item">
-                                            <div class="col-12 col-sm-12 col-md-12">
+                                            </div>
+
+                                            <div class="col-xl-3 col-lg-3">
                                                 <img src="./assets/image/3d.png" alt="">
                                                 <h3>Giữ và kéo để xoay vật thể 3D</h3>
                                             </div>
-                                        </div>
 
-                                        <div class="carousel-item">
-                                            <div class="col-12 col-md-12">
+                                            <div class="col-xl-3 col-lg-3">
                                                 <img src="./assets/image/zoom.png" alt="">
                                                 <h3>Di chuột vào ảnh để xem chi tiết</h3>
                                             </div>
                                         </div>
+
+                                        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                                            </ol>
+                                            <div class="carousel-inner row">
+                                                <div class="carousel-item active ">
+                                                    <div class="col-12 col-sm-12 col-md-12">
+                                                        <img src="./assets/image/xem-them (1).png" alt="">
+                                                        <h3>Bấm xem thêm để đọc thêm thông tin chi tiết</h3>
+                                                    </div>
+                                                </div>
+                                                <div class="carousel-item">
+                                                    <div class="col-12 col-sm-12 col-md-12">
+                                                        <img src="./assets/image/3d.png" alt="">
+                                                        <h3>Giữ và kéo để xoay vật thể 3D</h3>
+                                                    </div>
+                                                </div>
+
+                                                <div class="carousel-item">
+                                                    <div class="col-12 col-md-12">
+                                                        <img src="./assets/image/zoom.png" alt="">
+                                                        <h3>Di chuột vào ảnh để xem chi tiết</h3>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
                                         </div>
-                                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                          <span class="sr-only">Previous</span>
-                                        </a>
-                                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                          <span class="sr-only">Next</span>
-                                        </a>
-                                      </div>
+                                    </div>
                                 </div>
+
                             </div>
-                            
-                          </div>
                         </div>
-                      </div>
-                   
-
-                    <!-- <div class="toast guide__show" data-autohide="false" id="toast-show-guide">
-                        <div class="toast-header" id="header-guide-show">
-                            <strong class="mr-auto guide__show-title">Đến trung tâm trợ giúp</strong>
-
-                            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" id="btn-close-guide">&times;</button>
-                        </div>
-                        <div class="toast-body guide__show-content">
-                            <ul class="guide__show-list-content">
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông tin</a></li>
-                                <li class="guide__show-content-item"><a href="">Thông aaaaaaaaaaaaaaaaaaatin</a></li>
-
-
-
-
-
-                            </ul>
-                        </div>
-                    </div> -->
-
+                    </div>
                 </div>
             </section>
 
         </div>
 
         <!-- modal -->
-        
+
         <section>
             <div class="container">
                 <!-- The Modal -->
@@ -316,11 +483,31 @@
             </div>
         </section>
 
-        
+        <!-- test màu -->
+        <section>
+            <div class="container-test-color p-2 rounded">
+                <span>Có cần thay background không?</span>
+                <div class="color-item color-body mt-1">
+                    <label for="favcolor">Chọn màu nền body:</label>
+                    <input type="color" name="color-body" value="#ff0000">
 
+                </div>
 
+                <div class="color-item color-card">
+                    <label for="favcolor">Chọn màu card:</label>
+                    <input type="color" name="color-card" value="#ff0000">
+                </div>
+                <div class="color-item color-card">
+                    <label for="favcolor">Chọn màu tiêu trong card:</label>
+                    <input type="color" name="color-text-title-card" value="#ff0000">
+                </div>
 
-
+                <div class="color-item color-card">
+                    <label for="favcolor">Chọn màu tieeu đề list card:</label>
+                    <input type="color" name="color-text-title-list-card" value="#ff0000">
+                </div>
+            </div>
+        </section>
 
     </div>
 
@@ -331,6 +518,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
 
     <script src="./assets/js/main.js"></script>
@@ -350,335 +538,139 @@
     <!-- đoạn script này sẽ do php render từ data trealet ra -->
     <script>
         let arrItem = {
-            "images": [{
-                    'id': 1,
-                    "path": "Nhom08/Data/album1/--nh-th-b-ng-b-c.jpg",
-                    "title": `Đỉnh thờ bằng bạc`,
-                    "desc": `Một chiếc đỉnh thờ khác đúc bằng bạc, niên hiệu Khải Định thứ nhất (1916), chiều cao 29,5 cm. Bề mặt hiện vật được chạm khắc tỉ mỉ từng chi tiết. Theo nội dung cuốn sách, hoa văn trang trí chủ đạo của bảo vật là hình rồng 5 móng và hình phượng, biểu tượng của vua và hoàng hậu. Ngoài ra là các đề tài biểu tượng cho quốc thái dân an, thiên hạ thái bình, cho đấng quân tử và cầu chúc những điều tốt lành cho cuộc sống phú quý, khang kiện, phúc, lộc, trường thọ, may mắn, hạnh phúc...`,
-                    "date": "1635349090",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/--nh-th-b-ng-b-c.jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/--nh-th-b-ng-b-c_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349173",
-                }, {
-                    'id': 2,
-                    "path": "Nhom08/Data/album1/-n-Loan-ph-ng-ng--i-ng--ng-nh-t-th-ng-Thi-u-Tr-chi-b-o.jpg",
-                    "title": `ấn Loan phụng ngũ đại đồng đường nhất thống Thiệu Trị chi bảo`,
-                    "desc": `Ấn “Hoan phụng ngũ đại đồng đường nhất thống Thiệu Trị chi bảo”, chất liệu ngà. Niên hiệu Thiệu Trị thứ 6-7 (1846-1847), vua Thiệu Trị cho làm bảo ấn này nhân dịp hoàng gia có thêm thành viên thế hệ thứ 5 trong một gia đình (tính từ Thái hoàng Thái hậu Thuận Thiên – chính cung của Hoàng đế Gia Long đến người cháu thứ 5 vừa được sinh hạ).`,
-                    "date": "1635349090",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/-n-Loan-ph-ng-ng--i-ng--ng-nh-t-th-ng-Thi-u-Tr-chi-b-o.jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/-n-Loan-ph-ng-ng--i-ng--ng-nh-t-th-ng-Thi-u-Tr-chi-b-o_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349172",
-                }, {
-                    'id': 3,
-                    "path": "Nhom08/Data/album1/-n-T--c-th-n-h-n.jpg",
-                    "title": `Ấn Tự Đức thần hàn`,
-                    "desc": `1. Kim ấn: Tự Đức thần hàn. Ấn đúc bằng vàng, 2 cấp hình vuông, quai là tượng rồng chầu, 2 chân trước chống, 2 chân sau quỳ, đầu ngẩng, mũi cao, bờm dài, đuôi xoáy. Lưng ấn khắc 2 dòng chữ Hán:
-
-- Bên trái: Thập tuế hoàng kim, thất thập lục lạng lục tiền ngũ phân (Vàng 10 tuổi, nặng 76 lạng 6 tiền 5 phân).
-
-- Bên phải: Tự Đức nguyên niên nhị nguyệt cát nhật tạo. (Đúc vào ngày lành tháng 2 năm năm Tự Đức 1, 1848).
-
-Mặt ấn đúc nổi 4 chữ Triện trong khung diềm: Tự Đức Thần hàn. (Văn từ ở cung vua Tự Đức).`,
-                    "date": "1635349090",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/-n-T--c-th-n-h-n.jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/-n-T--c-th-n-h-n_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349172",
-                }, {
-                    'id': 4,
-                    "path": "Nhom08/Data/album1/B--a-ng-m-n-g-i-trong-m-th-c-cung--nh-Hu-.jpg",
-                    "title": `Bộ đĩa đựng món gỏi trong ẩm thực cung đình Huế`,
-                    "desc": `Qua các kỳ Festival Huế, chương trình Đêm Hoàng cung đã trở thành thương hiệu đặc biệt của Huế nói chung và Trung tâm Bảo tồn Di tích Cố đô Huế nói riêng. Trong Đêm Hoàng cung, điểm nhấn là chương trình dạ nhạc tiệc với những món ăn cung đình hoà quyện với sắc màu lung linh, huyền bí và âm thanh trang nhã của yến nhạc Triều Nguyễn.`,
-                    "date": "1635349090",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/B--a-ng-m-n-g-i-trong-m-th-c-cung--nh-Hu-.jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/B--a-ng-m-n-g-i-trong-m-th-c-cung--nh-Hu-_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349172",
-                }, {
-                    'id': 5,
-                    "path": "Nhom08/Data/album1/C-a--ng-th-nh-ng-H-i..jpg",
-                    "title": `Cửa Đông thành Đồng Hới.`,
-                    "desc": `Quảng Bình, đặc biệt là mảnh đất Đồng Hới, nơi tranh chấp dai dẳng, quyết liệt, kéo dài ngót 200 năm giữa hai tập đoàn phong kiến Đàng Trong và Đàng Ngoài. Cuộc phân tranh Trịnh-Nguyễn đã để lại ở Đồng Hới nhiều di tích lịch sử văn hóa tiêu biểu, trong đó phải kể đến di tích lũy Thầy, Quảng Bình quan và tấm bia Định Bắc trường thành.`,
-                    "date": "1566009124",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/C-a--ng-th-nh-ng-H-i..jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/C-a--ng-th-nh-ng-H-i._95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
-                }, {
-                    'id': 6,
-                    "path": "Nhom08/Data/album1/Ch-nh-i-n-c-a-Th-i-T-.jpg",
-                    "title": `Chánh điện của Thái Tổ`,
-                    "desc": `Thái Tổ miếu là công trình kiến trúc gỗ quy mô lớn nhất trong Hoàng thành Huế, được vua Gia Long cho xây dựng vào năm 1804 với 15 gian 2 chái, dài gần 70 m. Thái Tổ miếu thờ chúa Nguyễn Hoàng cùng 8 chúa triều Nguyễn.
-
-Vào năm 1947, Thái Tổ miếu bị thiêu rụi do chiến tranh. Năm 1971, bà Từ Cung và hoàng tử Bảo Long đã góp tiền xây dựng lại một phần Thái Tổ miếu trên nền cũ của công trình để thờ các chúa triều Nguyễn.`,
-                    "date": "1635349942",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/Ch-nh-i-n-c-a-Th-i-T-.jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/Ch-nh-i-n-c-a-Th-i-T-_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
-                }, {
-                    'id': 7,
-                    "path": "Nhom08/Data/album1/eb9be13432d84c60913a5fd98fc5e190.txt",
-                    "title": `tieu de`,
-                    "desc": ``,
-                    "date": "1635350097",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/eb9be13432d84c60913a5fd98fc5e190.txt",
-                    "url_thumb": "/cache/Nhom08/Data/album1/zp-core_class-textobject_textDefault_95_w95_h95_cw95_ch95_thumb.png?cached=1635350238",
-                }, {
-                    'id': 8,
-                    "path": "Nhom08/Data/album1/IMG_4933.jpg",
-                    "title": `Pháo cao xạ`,
-                    "desc": `Khẩu Hải pháo 10cm/65 Loại 98 (六五口径九八式一〇糎高角砲?) hay còn gọi là Pháo cao xạ 10cm dài (長10センチ高角砲 Chō 10-senchi kōkaku-hō?) là hải pháo hạng nhẹ sử dụng bởi Hải quân Đế quốc Nhật Bản trong Chiến tranh thế giới thứ hai. Chúng được trang bị trên tàu sân bay Taihō, tàu tuần dương hạng nhẹ Ōyodo, và tàu khu trục lớp Akizuki.[2][3] và đến năm 1945 bao gồm cả trên bộ. Nó được mệnh danh là pháo phòng không hàng đầu của Lực lượng vũ trang Đế quốc Nhật Bản trong Chiến tranh thế giới thứ hai. Sau chiến tranh, khẩu pháo này tiếp tục phục vụ trong Hải quân Liên Xô và Hải quân Trung Hoa Dân Quốc qua hai con tàu khu trục chiến tích.`,
-                    "date": "1398845153",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/IMG_4933.jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/IMG_4933_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
-                }, {
-                    'id': 9,
-                    "path": "Nhom08/Data/album1/jAof9fDT_bM.ytb",
-                    "title": `jAof9fDT_bM`,
-                    "desc": ``,
-                    "date": "1635350699",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/jAof9fDT_bM.ytb",
-                    "url_thumb": "/cache/Nhom08/Data/album1/zp-core_class-AnyFile_anyFileDefault_95_w95_h95_cw95_ch95_thumb.png?cached=1635350238",
-                }, {
-                    'id': 10,
-                    "path": "Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg",
-                    "title": `Lăng vua Thiệu Trị`,
-                    "desc": `Lăng Thiệu Trị có tên chữ là Xương Lăng (昌陵) là nơi chôn cất hoàng đế Thiệu Trị. Đây là một di tích trong Quần thể di tích cố đô Huế được UNESCO công nhận là di sản văn hóa thế giới ngày 11 tháng 12 năm 1993.
-Lăng Thiệu Trị nằm dựa lưng vào núi Thuận Đạo, ở địa phận làng Cư Chánh, xã Thủy Bằng, thành phố Huế, cách trung tâm thành phố khoảng 8 km. So với lăng tẩm các vua tiền nhiệm và kế vị, lăng Thiệu Trị có những nét riêng. Đây là lăng duy nhất quay mặt về hướng Tây Bắc, một hướng ít được dùng trong kiến trúc cung điện và lăng tẩm thời Nguyễn. Cách lăng 8 km về phía trước, ngọn núi Chằm sừng sững được chọn làm tiền án. Dòng sông Hương chảy qua trước mặt làm yếu tố minh đường. Ngay cách chọn "Tả thanh long" và "Hữu bạch hổ" cũng có những nét khác thường: đồi Vọng Cảnh ở bên này sông được chọn làm "rồng chầu", nhưng "hổ phục" lại là ngọn Ngọc Trản ở bên kia sông. Đằng sau, núi Kim Ngọc xa mờ trong mây được chọn làm hậu chẩm; đồng thời, những người kiến trúc lăng còn đắp thêm một mô đất cao lớn ở ngay sau lăng để làm hậu chẩm thứ hai. Một nét riêng khác là lăng không có La thành bao quanh. Nếu ở lăng Gia Long, La thành bằng gạch được thay thế bởi vô số núi đồi bao quanh như một vành đai tự nhiên, hùng tráng bảo vệ giấc ngủ cho vị tiên đế triều Nguyễn thì ở lăng Thiệu Trị, những cánh đồng lúa, những vườn cây xanh rờn ở chung quanh được xem là La thành. Chính vòng La thành thiên nhiên đó tạo cho cảnh quan lăng Thiệu Trị sự thanh thoát và yên bình.`,
-                    "date": "1599869403",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
-                }, {
-                    'id': 11,
-                    "path": "Nhom08/Data/album1/l6Q7GHrtJGo.ytb",
-                    "title": `l6Q7GHrtJGo`,
-                    "desc": ``,
-                    "date": "1635350744",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/l6Q7GHrtJGo.ytb",
-                    "url_thumb": "/cache/Nhom08/Data/album1/zp-core_class-AnyFile_anyFileDefault_95_w95_h95_cw95_ch95_thumb.png?cached=1635350238",
-                }, {
-                    'id': 12,
-                    "path": "Nhom08/Data/album1/M-th--ng-tri-u-c-a-Vua-tri-u-Nguy-n.jpg",
-                    "title": `Mũ thượng triều của Vua triều Nguyễn`,
-                    "desc": ` Ấn tượng đặc biệt từ chiếc mũ thượng triều của vua nhà Nguyễn là 35 con rồng năm móng bằng vàng ròng được gắn ở nhiều vị trí khác nhau, mang tính đối xứng chặt chẽ. Xét về vai trò, chiếc mũ này tương đương với vương miện của các hoàng đế phương Tây.`,
-                    "date": "1635349090",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/M-th--ng-tri-u-c-a-Vua-tri-u-Nguy-n.jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/M-th--ng-tri-u-c-a-Vua-tri-u-Nguy-n_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349173",
-                }, {
-                    'id': 13,
-                    "path": "Nhom08/Data/album1/Phi-n-ng-c-Ng-di-n-v-n-b-o.jpg",
-                    "title": `Phiến ngọc Ngự diên văn bảo`,
-                    "desc": `Phiến ngọc Ngự diên văn bảo hình chữ nhật có
-diềm khung nổi, chạm hồi văn chữ S đầu vuông.
-Phiến ngọc tạo bằng ngọc trắng xám, diềm 4 góc
-và xung quanh chạm hình bướm và hoa dây.
-Trong diềm chạm 2 hình rồng uốn mình, đầu
-ngẩng cao chầu viên bảo ngọc, trên nền mây.
-Kiểu rồng đuôi xoáy này rất phổ biến trong nghệ
-thuật Nguyễn. Chính giữa phiến ngọc khắc nổi 4
-chữ triện: Ngự diên văn bảo (nơi lưu giữ các văn
-bản quý của hoàng đế). Phiến ngọc này hẳn đã
-được dùng đặt ở nơi văn`,
-                    "date": "1635349378",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/Phi-n-ng-c-Ng-di-n-v-n-b-o.jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/Phi-n-ng-c-Ng-di-n-v-n-b-o_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
-                }, {
-                    'id': 14,
-                    "path": "Nhom08/Data/album1/Qu-c-u-c-u-long-s-n-th-p-th-i-Nguy-n-1802-1945..jpg",
-                    "title": `Quả cầu cửu long sơn thếp thời Nguyễn 1802-1945.`,
-                    "desc": `Quả cầu cửu long bằng gỗ sơn son thếp vàng là hiện vật tiêu biểu độc đáo về chạm khắc gỗ thời Nguyễn`,
+            "topics": [{
+                "title": "Tiêu đề số 1",
+                "desc": "",
+                "items": [{
+                    "id": 14,
+                    "title": "Quả cầu cửu long sơn thếp thời Nguyễn 1802-1945.",
+                    "desc": "Quả cầu cửu long bằng gỗ sơn son thếp vàng là hiện vật tiêu biểu độc đáo về chạm khắc gỗ thời Nguyễn",
                     "date": "1536286306",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/Qu-c-u-c-u-long-s-n-th-p-th-i-Nguy-n-1802-1945..jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/Qu-c-u-c-u-long-s-n-th-p-th-i-Nguy-n-1802-1945._95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/Qu-c-u-c-u-long-s-n-th-p-th-i-Nguy-n-1802-1945..jpg"
                 }, {
-                    'id': 15,
-                    "path": "Nhom08/Data/album1/thumb_660_e2482e05-ab89-41f4-931c-bd7e66771923.jpeg",
-                    "title": `Đường cách mệnh`,
-                    "desc": `Đường Kách mệnh (hay Đường cách mệnh, tên cuốn sách trên bản gốc được viết là "Dường Kách mệnh"[a]) là tác phẩm ghi lại những bài giảng của Nguyễn Ái Quốc cho các lớp đào tạo cán bộ tại Quảng Châu do Bộ tuyên truyền của "Hội Liên hiệp các dân tộc bị áp bức ở Á Đông" phát hành vào đầu năm 1927. Cuốn sách này đánh dấu cho sự truyền bá Chủ nghĩa Marx – Lenin vào Việt Nam những năm 20 của thế kỷ XX.[1]
-Theo nhà báo – học giả Quang Đạm, hai chữ "cách mệnh" từ Trung Quốc vào Việt Nam có thể là vào những năm xã hội Việt Nam tiếp nhận "Tân thư" của Khang Hữu Vi, Lương Khải Siêu (cùng khoảng thời gian với các tác phẩm từ nước Pháp của R.Descartes, Montesquieu). Chữ "cách mệnh" theo tinh thần của Nho giáo Trung Quốc là "đổi cái mệnh Trời giao cho con Trời (thiên tử) – là vua nếu vua không làm tròn nhiệm vụ, giữ cái mệnh ấy, vì vậy phải giao "sứ mệnh" này cho con Trời khác".[2]`,
-                    "date": "1635350065",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/thumb_660_e2482e05-ab89-41f4-931c-bd7e66771923.jpeg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/thumb_660_e2482e05-ab89-41f4-931c-bd7e66771923_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635350238",
-                }, {
-                    'id': 16,
-                    "path": "Nhom08/Data/album1/trong-dong-dong-son-1.jpg",
-                    "title": `Trống Đồng Đông Sơn`,
-                    "desc": `Trống đồng Đông Sơn là tên một loại trống đồng tiêu biểu cho Văn hóa Đông Sơn (700 TCN - 100) của người Việt cổ. Những chiếc trống này với quy mô đồ sộ, hình dáng cân đối, hài hoà đã thể hiện một trình độ rất cao về kỹ năng và nghệ thuật, đặc biệt là những hoa văn phong phú được khắc họa, miêu tả chân thật đời sống sinh hoạt của con người thời kỳ dựng nước mà người ta vẫn cho là chìm trong đám mây mù của truyền thuyết Việt Nam. Viện Bảo tàng Lịch sử Việt Nam đã lưu giữ một số lớn trống đồng Đông Sơn. Cho đến nay, theo các số liệu đã công sưu tập lớn nhất thế giới. Ngôi sao nhiều cánh ở giữa mặt trống tượng trưng cho thần Mặt Trời vì người dân Văn Lang có quan niệm về một vị thần liên quan đến Mặt Trời`,
+                    "id": 16,
+                    "title": "Trống Đồng Đông Sơn",
+                    "desc": "Trống đồng Đông Sơn aaa",
                     "date": "1635348353",
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/trong-dong-dong-son-1.jpg",
-                    "url_thumb": "/cache/Nhom08/Data/album1/trong-dong-dong-son-1_95_w95_h95_cw95_ch95_thumb.jpg?cached=1635349173",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/trong-dong-dong-son-1.jpg"
                 }, {
-                    'id': 17,
-                    "path": "Nhom08/Data/album1/test-height.png",
-                    "title": "test-height",
-                    "date": 1635737749,
-                    'desc': 'noi dung',
-                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/test-height.png",
-                    "url_sized": "/zp-core/i.php?a=Nhom08/Data/album1&i=test-height.png&s=580&cw=0&ch=0&q=85&wmk=!&check=eedfbb1177ae697726a37e7181ddacb62cbb8b5c",
-                    "url_thumb": "/cache/Nhom08/Data/album1/test-height_95_w95_h95_cw95_ch95_thumb.png?cached=1635737778",
-                    "width": 500,
-                    "height": 1597,
-                },
-
-            ]
+                    "id": 17,
+                    "title": "Trống Đồng Đông Sơn",
+                    "desc": "Trống đồng Đông Sơn aaa",
+                    "date": "1635348353",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/-n-Loan-ph-ng-ng--i-ng--ng-nh-t-th-ng-Thi-u-Tr-chi-b-o.jpg"
+                }, {
+                    "id": 18,
+                    "title": "Bộ đĩa đựng món gỏi trong ẩm thực cung đình Huế",
+                    "desc": "Trống đồng Đông Sơn aaa",
+                    "date": "1635348353",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/B--a-ng-m-n-g-i-trong-m-th-c-cung--nh-Hu-.jpg"
+                }]
+            }, {
+                "title": "Tiêu đề số 2",
+                "desc": "",
+                "items": [{
+                    "id": 12,
+                    "title": "Mũ thượng triều của Vua triều Nguyễn",
+                    "desc": " Ấn tượng đặc biệt từ chiếc mũ thượng triều của vua nhnày ơng Tây.",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/M-th--ng-tri-u-c-a-Vua-tri-u-Nguy-n.jpg"
+                }, {
+                    "id": 11,
+                    "title": "l6Q7GHrtJGo",
+                    "desc": "",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/l6Q7GHrtJGo.ytb"
+                }, {
+                    "id": 50,
+                    "title": "Trống Đồng Đông Sơn",
+                    "desc": "Trống đồng Đông Sơn aaa",
+                    "date": "1635348353",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/Ch-nh-i-n-c-a-Th-i-T-.jpg"
+                }, {
+                    "id": 51,
+                    "title": "Pháo cao xạ",
+                    "desc": "Trống đồng Đông Sơn aaa",
+                    "date": "1635348353",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/IMG_4933.jpg"
+                }, {
+                    "id": 52,
+                    "title": "Trống Đồng Đông Sơn",
+                    "desc": "Trống đồng Đông Sơn aaa",
+                    "date": "1635348353",
+                    "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg"
+                }]
+            }]
         }
     </script>
 
     <script>
-        let column1 = document.getElementById('column1');
-        let column2 = document.getElementById('column2');
-        let column3 = document.getElementById('column3');
-        let column4 = document.getElementById('column4');
-
         let modal = document.getElementById('myModal');
+        for (const index in arrItem.topics) {
+            var html = `
+            <!-- item  ${index}-->
+            <section id="list-card-${index}" >
+                <div class="title-list-card" id="title-list-card-${index}">
+                    <h3 class=" d-flex justify-content-center">${arrItem.topics[index].title}</h3>
+                </div>
 
-        let cols = {
-            col1: column1,
-            col2: column2,
-            col3: column3,
-            col4: column4,
-        }
-
-        DataMuseum.renderItemHTMLCard(cols, arrItem.images);
-
-
-
-        function clickCard(idItem) {
-            console.log('click card ' + idItem);
-            // $('#cardYTB-DwyzrcRw0EI')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-            DataMuseum.renderItemHTMLModal(modal, idItem, arrItem.images);
-            $(document).ready(function() {
-                $('img.modal-topic_img-image').okzoom({
-                    width: 200,
-                    height: 200,
-                    scaleWidth: 800,
-                    round: true,
-                    background: "#fff",
-                    // backgroundRepeat: "repeat",
-                    shadow: "0 0 5px #000",
-                    border: "1px solid black"
-                });
-
-                $('#data_fetch video').each(function() {
-
-                    $(this)[0].pause();
-
-                })
-
-                $('iframe').each(function() {
-                    if ($(this).is(":in-viewport")) {
-                        $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-                    }
-                })
-
-
-                $('#myModal').on('hidden.bs.modal', function() {
-
-
-                    $('video').each(function() {
-                        if ($(this).is(":in-viewport")) {
-                            $(this)[0].play();
-                        } else {
-                            $(this)[0].pause();
-                        }
-
-                        $('#myModal video').each(function() {
-                            $(this)[0].pause();
-                        })
-
-
-                    })
-
-                    $('iframe').each(function() {
-                        if ($(this).is(":in-viewport")) {
-                            $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-                        }
-                    })
-                })
-            })
-
-
-        }
-
-        function clickControlSlide(control) {
-            // $('#ok-lorgnette').css()
-            $("#ok-lorgnette").css("display", "none");
-            var index = parseInt($("#main-myModal").attr("index-data"));
-            if (arrItem && arrItem.images.length > 1 && isNumber(index)) {
-                console.log("click control\n" + "index : " + index);
-                console.log("control:" + control);
-                DataMuseum.controlSlideItem(modal, index, arrItem.images, control);
-            } else {
-                console.log("loi j do ve control");
+                <div class="card-columns d-flex">
+                    <div class="row" id="data_fetch">
+                        <div class="col-sm-12 col-md-6 col-lg-3" id="column-${index}-1"> </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3" id="column-${index}-2"> </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3" id="column-${index}-3"> </div>
+                        <div class="col-sm-12 col-md-6 col-lg-3" id="column-${index}-4"> </div>
+                    </div>
+                </div>
+            </section>
+            `;
+            if (index > 0) {
+                html = "<hr>" + html;
             }
 
-            $('img.modal-topic_img-image').okzoom({
-                width: 200,
-                height: 200,
-                scaleWidth: 800,
-                round: true,
-                background: "#fff",
-                // backgroundRepeat: "repeat",
-                shadow: "0 0 5px #000",
-                border: "1px solid black"
-            });
+            $('.main').append(html);
 
-            const turnOffShareModal = $( ".modal-backdrop.fade" );
-            if(turnOffShareModal.hasClass('show')) turnOffShareModal.remove()
+            var cols = [
+                `column-${index}-1`,
+                `column-${index}-2`,
+                `column-${index}-3`,
+                `column-${index}-4`,
+            ];
 
-
+            rederColCardsHTML(cols, arrItem.topics[index].items, index);
         }
 
-        const handleCloseShareModal = () => {
-             $('#modal-share').removeClass('show')
-             $(".modal-backdrop.fade" ).remove();
-             this.overlayModal();
-           
-        }
+        function rederColCardsHTML(idsCol, data, indexTopic) {
 
-        var isNumber = function isNumber(value) {
-            return typeof value === 'number' && isFinite(value);
-        }
-
-        document.onkeyup = function(e) {
-            if ($("#myModal").hasClass("modal") && $("#myModal").hasClass("show")) {
-                if (event.key == "ArrowRight") {
-                    clickControlSlide("next");
-                    console.log("phải");
-                } else if (event.key == "ArrowLeft") {
-                    clickControlSlide("pre");
-                    console.log("trái");
-
-                }
+            let column1 = $(`#${idsCol[0]}`)[0];
+            let column2 = $(`#${idsCol[1]}`)[0];
+            let column3 = $(`#${idsCol[2]}`)[0];
+            let column4 = $(`#${idsCol[3]}`)[0];
+            let cols = {
+                col1: column1,
+                col2: column2,
+                col3: column3,
+                col4: column4,
             }
-            console.log(e);
+
+            DataMuseum.renderItemHTMLCard(cols, data, indexTopic);
+            // console.log(data);
         }
 
-        // copy link share
-        function copyLinkShare() {
-            /* Get the text field */
-            var copyText = document.getElementById("input-link-share");
 
-            /* Select the text field */
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+        // let column1 = document.getElementById('column1');
+        // let column2 = document.getElementById('column2');
+        // let column3 = document.getElementById('column3');
+        // let column4 = document.getElementById('column4');
 
-            /* Copy the text inside the text field */
-            navigator.clipboard.writeText(copyText.value);
 
-            /* Alert the copied text */
-            console.log("Copied the text: " + copyText.value);
+        // let cols = {
+        //     col1: column1,
+        //     col2: column2,
+        //     col3: column3,
+        //     col4: column4,
+        // }
 
-            var html = `Sao chép thành công`;
-            const newSpan = document.createElement("span");
-            newSpan.innerHTML = html;
-            newSpan.setAttribute('style', 'color: #fff;background-color: #000;opacity: 0.8;padding: 0.5rem;border-radius: 0.25rem;font-size: 0.9rem;position: absolute;z-index: 2000;left: 45%; margin-top: 2px');
-            document.querySelector('#share-modal .content-share-modal').appendChild(newSpan);
-            setTimeout(function() {
-                newSpan.remove();
-            }, 1500)
-
-        }
-        function overlayModal() {
-            var overlay = document.querySelector('#modal-share .overlay').style.display = "none";
-            $('#modal-share').modal('toggle');
-        }
+        // DataMuseum.renderItemHTMLCard(cols, arrItem.images);
     </script>
-
-    <!-- <div>
-        <span>Sao chép thành công</span>
-    </div> -->
 
     <script async src="https://www.youtube.com/iframe_api"></script>
     <script>
@@ -708,6 +700,10 @@ Theo nhà báo – học giả Quang Đạm, hai chữ "cách mệnh" từ Trung
         // }
 
         // Written by @labnol
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 
 </body>

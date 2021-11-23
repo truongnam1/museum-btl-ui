@@ -1,31 +1,5 @@
 $(document).ready(function() {
     // bật, tắt guide
-    // $toastShow = $('#toast-show-guide');
-    // $("#guide_image-bg-1").click(
-    //     function() {
-    //         console.log($toastShow.attr("data-autohide"));
-    //         if ($toastShow.attr("data-autohide") == 'false' &&
-    //             !$toastShow.hasClass('hide') && !$toastShow.hasClass('show')) {
-    //             $('#toast-show-guide').toast("show");
-    //             console.log("show 1");
-    //         } else if ($toastShow.hasClass('hide')) {
-    //             $('#toast-show-guide').toast("show");
-    //             console.log("show 2");
-
-    //         } else {
-    //             $('#toast-show-guide').toast("hide");
-    //             console.log("show 3");
-
-    //         }
-    //     }
-    // )
-
-    // thả tim cho card
-    // $(".user-like i").click(function(index) {
-    //     console.log("tim")
-    //     $iconElement = $(index.target);
-    //     $iconElement.toggleClass(["fas", "far", "user-like__liked", "user-like__unlike"]);
-    // });
     $(window).scroll(function() {
         $('video').each(function() {
             if ($(this).is(":in-viewport")) {
@@ -43,14 +17,9 @@ $(document).ready(function() {
             } else {
 
                 $(this)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-
-
             }
-
-
         })
     })
-
 
     $("body video").each(function() {
         this.muted = true;
@@ -63,31 +32,44 @@ $(document).ready(function() {
             document.querySelector("#main-myModal").innerHTML = "";
         }
         if ($("#myModal").hasClass("modal") && $("#myModal").hasClass("show")) {
-            // console.log("zooom");
-            $('#save-modal').click(function() {
-                html2canvas(document.querySelector("#main-myModal")).then(canvas => {
-                    // document.body.appendChild(canvas)
-
-                    var dataURL = canvas.toDataURL("image/png");
-                    // console.log(dataURL);
-                    var elementA = document.createElement("a");
-                    elementA.download = '';
-                    elementA.href = dataURL;
-                    elementA.click()
-                    console.log(elementA);
-                });
-                console.log('caven');
-            });
-
             $('#btn-share-modal').click(function() {
                 console.log('click btn share');
                 document.querySelector('#modal-share .overlay').style.display = "block";
 
             });
-
         }
         // console.log("hhhhhhhhhhhhhhhhhhh");
     }
 
+    $('.container-test-color input[name=color-body]').on('input', testColorBody);
+    $('.container-test-color input[name=color-card]').on('input', testColorCard);
+    $('.container-test-color input[name=color-text-title-card]').on('input', testColorTextTitleCard);
+    $('.container-test-color input[name=color-text-title-list-card]').on('input', testColorTextTitleListCard);
+
 
 });
+
+
+function testColorBody(e) {
+    var bgColorBody = $('.container-test-color input[name=color-body]').val();
+    // console.log(bgColorBody);
+    $("body").css("background-color", bgColorBody);
+}
+
+function testColorCard() {
+    var bgColorCard = $('.container-test-color input[name=color-card]').val();
+    // console.log(bgColorBody);
+    $(".card-pin").css("background-color", bgColorCard);
+}
+
+function testColorTextTitleCard() {
+    var color = $('.container-test-color input[name=color-text-title-card]').val();
+    // console.log(bgColorBody);
+    $(".title-card-museum-footer").css("color", color);
+}
+
+function testColorTextTitleListCard() {
+    var color = $('.container-test-color input[name=color-text-title-list-card]').val();
+    // console.log(bgColorBody);
+    $(".title-list-card").css("color", color);
+}
