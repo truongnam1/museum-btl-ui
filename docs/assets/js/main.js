@@ -41,10 +41,10 @@ $(document).ready(function() {
         // console.log("hhhhhhhhhhhhhhhhhhh");
     }
 
-    $('.container-test-color input[name=color-body]').on('input', testColorBody);
-    $('.container-test-color input[name=color-card]').on('input', testColorCard);
-    $('.container-test-color input[name=color-text-title-card]').on('input', testColorTextTitleCard);
-    $('.container-test-color input[name=color-text-title-list-card]').on('input', testColorTextTitleListCard);
+    // $('.container-test-color input[name=color-body]').on('input', testColorBody);
+    // $('.container-test-color input[name=color-card]').on('input', testColorCard);
+    // $('.container-test-color input[name=color-text-title-card]').on('input', testColorTextTitleCard);
+    // $('.container-test-color input[name=color-text-title-list-card]').on('input', testColorTextTitleListCard);
 
 
 });

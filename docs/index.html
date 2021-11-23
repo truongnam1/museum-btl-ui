@@ -484,7 +484,7 @@
         </section>
 
         <!-- test màu -->
-        <section>
+        <!-- <section>
             <div class="container-test-color p-2 rounded">
                 <span>Có cần thay background không?</span>
                 <div class="color-item color-body mt-1">
@@ -507,7 +507,7 @@
                     <input type="color" name="color-text-title-list-card" value="#ff0000">
                 </div>
             </div>
-        </section>
+        </section> -->
 
     </div>
 
@@ -540,7 +540,8 @@
         let arrItem = {
             "topics": [{
                 "title": "Tiêu đề số 1",
-                "desc": "",
+                "desc": `Tick, Tick... Boom! là một phim ca nhạc rất đẹp và thật may mắn khi có thể xem nó dù ở thời điểm nào của cuộc đời. Người chớm 20 sẽ biết trân trọng thanh xuân mình có
+                , người gần 30 cũng có cơ hội nhìn lại chặng đường đã đi, những quyết định đã thực hiện.`,
                 "items": [{
                     "id": 14,
                     "title": "Quả cầu cửu long sơn thếp thời Nguyễn 1802-1945.",
@@ -568,7 +569,7 @@
                 }]
             }, {
                 "title": "Tiêu đề số 2",
-                "desc": "",
+                "desc": `Người chớm 20 sẽ biết trân trọng thanh xuân mình có, người gần 30 cũng có cơ hội nhìn lại chặng đường đã đi, những quyết định đã thực hiện.`,
                 "items": [{
                     "id": 12,
                     "title": "Mũ thượng triều của Vua triều Nguyễn",
@@ -610,6 +611,7 @@
             <section id="list-card-${index}" >
                 <div class="title-list-card" id="title-list-card-${index}">
                     <h3 class=" d-flex justify-content-center">${arrItem.topics[index].title}</h3>
+                    <div><p>${arrItem.topics[index].desc}<p></div>
                 </div>
 
                 <div class="card-columns d-flex">
@@ -654,52 +656,10 @@
             DataMuseum.renderItemHTMLCard(cols, data, indexTopic);
             // console.log(data);
         }
-
-
-        // let column1 = document.getElementById('column1');
-        // let column2 = document.getElementById('column2');
-        // let column3 = document.getElementById('column3');
-        // let column4 = document.getElementById('column4');
-
-
-        // let cols = {
-        //     col1: column1,
-        //     col2: column2,
-        //     col3: column3,
-        //     col4: column4,
-        // }
-
-        // DataMuseum.renderItemHTMLCard(cols, arrItem.images);
     </script>
 
     <script async src="https://www.youtube.com/iframe_api"></script>
     <script>
-        // function onYouTubeIframeAPIReady() {
-        //     var player;
-        //     player = new YT.Player('muteYouTubeVideoPlayer', {
-        //         videoId: 'Ex1RWBVZWpk', // YouTube Video ID
-        //         // width: 500, // Player width (in px)
-        //         // height: 316, // Player height (in px)
-        //         playerVars: {
-        //             autoplay: 1, // Auto-play the video on load
-        //             controls: 1, // Show pause/play buttons in player
-        //             showinfo: 1, // Hide the video title
-        //             modestbranding: 1, // Hide the Youtube Logo
-        //             loop: 1, // Run the video in a loop
-        //             fs: 0, // Hide the full screen button
-        //             cc_load_policy: 0, // Hide closed captions
-        //             iv_load_policy: 3, // Hide the Video Annotations
-        //             autohide: 0 // Hide video controls when playing
-        //         },
-        //         events: {
-        //             onReady: function(e) {
-        //                 // e.target.mute();
-        //             }
-        //         }
-        //     });
-        // }
-
-        // Written by @labnol
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
