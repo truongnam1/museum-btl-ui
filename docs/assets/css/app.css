@@ -1,16 +1,30 @@
 body {
-  background-color: var(--musesum-bg-body);
+    background-color: var(--musesum-bg-body);
 }
 
 .container {
-  margin-top: 5.5rem;
+    margin-top: 5.5rem;
 }
 
 #navbar-category {
-  overflow: hidden;
-}
-.modal-backdrop {
-  z-index: 1039;
+    overflow: hidden;
 }
 
+.modal-backdrop {
+    z-index: 1039;
+}
+
+
 /* ca */
+
+
+/* test màu */
+
+.container-test-color {
+    position: fixed;
+    top: 6.5rem;
+    right: 0;
+    min-width: 100px;
+    min-height: 100px;
+    background-color: aliceblue;
+}

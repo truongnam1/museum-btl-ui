@@ -40,4 +40,36 @@ $(document).ready(function() {
         }
         // console.log("hhhhhhhhhhhhhhhhhhh");
     }
+
+    $('.container-test-color input[name=color-body]').on('input', testColorBody);
+    $('.container-test-color input[name=color-card]').on('input', testColorCard);
+    $('.container-test-color input[name=color-text-title-card]').on('input', testColorTextTitleCard);
+    $('.container-test-color input[name=color-text-title-list-card]').on('input', testColorTextTitleListCard);
+
+
 });
+
+
+function testColorBody(e) {
+    var bgColorBody = $('.container-test-color input[name=color-body]').val();
+    // console.log(bgColorBody);
+    $("body").css("background-color", bgColorBody);
+}
+
+function testColorCard() {
+    var bgColorCard = $('.container-test-color input[name=color-card]').val();
+    // console.log(bgColorBody);
+    $(".card-pin").css("background-color", bgColorCard);
+}
+
+function testColorTextTitleCard() {
+    var color = $('.container-test-color input[name=color-text-title-card]').val();
+    // console.log(bgColorBody);
+    $(".title-card-museum-footer").css("color", color);
+}
+
+function testColorTextTitleListCard() {
+    var color = $('.container-test-color input[name=color-text-title-list-card]').val();
+    // console.log(bgColorBody);
+    $(".title-list-card").css("color", color);
+}

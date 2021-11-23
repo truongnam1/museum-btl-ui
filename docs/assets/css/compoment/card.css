@@ -51,6 +51,7 @@ div.card-img:hover .img-overlay {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+    margin-bottom: 0;
 }
 
 .museum-card-img {}

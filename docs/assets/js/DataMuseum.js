@@ -4,7 +4,8 @@ window.DataMuseum = (function() {
         data.innerHTML = "<h1>day la nam</h1>";
     }
 
-    this.renderItemHTMLCard = function(cols, data) {
+    this.renderItemHTMLCard = function(cols, data, indexTopic = null) {
+        console.log(`cols`, cols);
         var arrCols = [];
         arrCols[0] = "";
         arrCols[1] = "";
@@ -16,7 +17,7 @@ window.DataMuseum = (function() {
             let choiceURLFull = extUrl(data[indexItem]["url_full"], "card");
 
             var html = `
-            <div class="card card-pin shadow-lg card-lg" index-data="${indexItem}"  onclick="clickCard(${indexItem})" data-toggle="modal" data-target="#myModal">
+            <div class="card card-pin shadow-lg card-lg" index-data="${indexItem}" index-topic="${indexTopic}" onclick="clickCard(${indexItem},${indexTopic})" data-toggle="modal" data-target="#myModal">
                                 <div class="card-img">
                                     ${choiceURLFull}
                                     <div class="img-overlay text-center">
@@ -37,13 +38,13 @@ window.DataMuseum = (function() {
                                 </div>
                                 <div class="card-footer card-museum-footer">
                                     <h5 class="card-title title title-card-museum-footer">${data[indexItem]["title"]}</h5>
-                                    <div class="card-footer__bottom d-flex">
-                                        <div class="pr-2 user-card d-flex align-items-center">
-                                            <!-- <img src="assets/image/Bot-avt.png" class="user-card__avata-user rounded-circle" alt=""> -->
+                                    <!--<div class="card-footer__bottom d-flex">
+                                       <div class="pr-2 user-card d-flex align-items-center">
+                                        
                                             <div class="user-card__avata-user rounded-circle"></div>
                                             <span class="pl-1 user-card__name-user">Nhóm 8</span>
-                                        </div>
-                                    </div>
+                                        </div> 
+                                    </div>-->
                                 </div>
                             </div>
             `;
@@ -158,14 +159,15 @@ window.DataMuseum = (function() {
     }
 
 
-    this.renderItemHTMLModal = async function(modal, idItem, data) {
-        var item = data[idItem];
+    this.renderItemHTMLModal = async function(modal, indexItem, data, indexTopic) {
+        var item = data.items[indexItem];
+        // console.log(item);
         var urlShare = createLinkShare(item);
         console.log("this is modal123");
         let choiceURLFull = extUrl(item["url_full"], "modal");
         let html = `
 
-        <div class="modal-dialog modal-lg modal-dialog-centered" id="main-myModal" index-data="${idItem}" style="
+        <div class="modal-dialog modal-lg modal-dialog-centered" id="main-myModal" index-data="${indexItem}" index-topic="${indexTopic}" style="
         overflow-y: initial !important;">
         <div class="modal-content modal-content-custom">
         <!-- bắt đầu sửa modal từ trong này....................... -->
@@ -186,18 +188,7 @@ window.DataMuseum = (function() {
             </div>
             <div class="col-lg-6 modal-content-custom-text">
                 <div class="modal-header-custom">
-                    <!--<div class="d-flex justify-content-end align-items-center">
-                    
-
-                        <div class="d-flex align-items-center">
-                            <div class="card-item-top__save-card">
-                                <button class="btn-musesum btn-musesum--primary-save" id="btn-share-modal" data-toggle="modal" href="#modal-share">Chia sẻ</button>
-                            </div>
-                            <div class="card-item-top__save-card">
-                                <button class="btn-musesum btn-musesum--primary-save" id="save-modal">Lưu</button>
-                            </div>
-                        </div>
-                    </div>  -->
+                   
                     <div class="">
   
                         <h3 class="title-text">${item["title"]}</h3>
@@ -259,13 +250,15 @@ window.DataMuseum = (function() {
     }
 
     this.controlSlideItem = function(modal, indexCurrent, data, control) {
-        var lengthArr = data.length;
+        var indexTopic = parseInt($('#main-myModal').attr('index-topic'));
+
+        var lengthArr = data.items.length;
         console.log("control slide");
-        // console.log(data);
+        // console.log(dataItemTopic);
         console.log("indexCurrent: " + indexCurrent);
         // console.log("control: " + control);
 
-        if (control == "next" && data) {
+        if (control == "next" && data.items) {
             var indexNext;
             if (indexCurrent != 0) {
                 indexNext = (indexCurrent + 1) % lengthArr;
@@ -273,8 +266,8 @@ window.DataMuseum = (function() {
                 indexNext = 1;
             }
 
-            this.renderItemHTMLModal(modal, indexNext, data);
-        } else if (control == "pre" && data) {
+            this.renderItemHTMLModal(modal, indexNext, data, indexTopic);
+        } else if (control == "pre" && data.items) {
             var indexPre;
 
             if (indexCurrent != 0) {
@@ -283,7 +276,7 @@ window.DataMuseum = (function() {
                 indexPre = lengthArr - 1;
             }
 
-            this.renderItemHTMLModal(modal, indexPre, data);
+            this.renderItemHTMLModal(modal, indexPre, data, indexTopic);
 
         }
     }

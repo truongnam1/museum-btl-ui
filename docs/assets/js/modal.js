@@ -31,25 +31,39 @@ $(document).ready(function() {
         const urlParams = new URLSearchParams(window.location.search);
         var id = parseInt(urlParams.get('item'));
         if (Number.isInteger(id)) {
+            var indexTopic = null;
+            var indexItem = null;
 
-            var index = arrItem.images.findIndex(function(item) {
-                return item.id === id;
-            })
-            console.log(index);
 
-            if (Number.isInteger(index)) {
-                console.log(`modal`, modal);
-                try {
-                    DataMuseum.renderItemHTMLModal(modal, index, arrItem.images);
-                    $('#myModal').modal('show');
-                } catch (error) {
-                    console.log('loi', error);
+            for (const key in arrItem.topics) {
+                console.log('key', key);
+                indexItem = arrItem.topics[key].items.findIndex(function(item) {
+                    return item.id === id;
+                })
+                console.log('indexItem', indexItem);
+
+                if (Number.isInteger(indexItem) && indexItem >= 0) {
+                    indexTopic = parseInt(key);
+                    break;
                 }
+            }
+
+        }
+
+
+        if (Number.isInteger(indexItem) && indexItem >= 0) {
+            console.log('indexItem', indexItem);
+            console.log('indexTopic', indexTopic);
+            console.log(`modal`, modal);
+            try {
+                DataMuseum.renderItemHTMLModal(modal, indexItem, arrItem.topics[indexTopic], indexTopic);
+                $('#myModal').modal('show');
+            } catch (error) {
+                console.log('loi', error);
             }
         }
     }
     createModalItemParams();
-
 })
 
 function clickSaveModal() {
@@ -111,10 +125,11 @@ function overlayModal() {
 }
 
 
-function clickCard(idItem) {
-    console.log('click card ' + idItem);
+function clickCard(indexItem, indexTopic) {
+    console.log('click card ' + indexItem);
+    // console.log('topic', arrItem.topics[indexTopic]);
     // $('#cardYTB-DwyzrcRw0EI')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-    DataMuseum.renderItemHTMLModal(modal, idItem, arrItem.images);
+    DataMuseum.renderItemHTMLModal(modal, indexItem, arrItem.topics[indexTopic], indexTopic);
     $(document).ready(function() {
         $('img.modal-topic_img-image').okzoom({
             width: 200,
@@ -171,11 +186,16 @@ function clickCard(idItem) {
 function clickControlSlide(control) {
     // $('#ok-lorgnette').css()
     $("#ok-lorgnette").css("display", "none");
+
     var index = parseInt($("#main-myModal").attr("index-data"));
-    if (arrItem && arrItem.images.length > 1 && isNumber(index)) {
+    var indexTopic = parseInt($("#main-myModal").attr("index-topic"));
+    // console.log(`indexTopic`, indexTopic);
+    // console.log(arrItem.topics[indexTopic].items);
+
+    if (arrItem && arrItem.topics[indexTopic].items.length > 1) {
         console.log("click control\n" + "index : " + index);
         console.log("control:" + control);
-        DataMuseum.controlSlideItem(modal, index, arrItem.images, control);
+        DataMuseum.controlSlideItem(modal, index, arrItem.topics[indexTopic], control);
     } else {
         console.log("loi j do ve control");
     }
@@ -210,10 +230,10 @@ var isNumber = function isNumber(value) {
 
 document.onkeyup = function(e) {
     if ($("#myModal").hasClass("modal") && $("#myModal").hasClass("show")) {
-        if (event.key == "ArrowRight") {
+        if (e.key == "ArrowRight") {
             clickControlSlide("next");
             console.log("phải");
-        } else if (event.key == "ArrowLeft") {
+        } else if (e.key == "ArrowLeft") {
             clickControlSlide("pre");
             console.log("trái");
         }
