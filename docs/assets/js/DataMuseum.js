@@ -32,7 +32,7 @@ window.DataMuseum = (function() {
                                             </div>
                                         </div> -->
 
-                                        <div class="text-white w-100 h-100" ><span>Xem thêm >></span></div>
+                                        <div class="text-white w-100 h-100" ><span>Xem thêm <i class="ti-angle-double-right"></i></span></div>
                                         
                                     </div>
 

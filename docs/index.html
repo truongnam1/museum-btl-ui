@@ -91,14 +91,14 @@
             </div>
         </nav>
     </header>
-
+    <!-- <i class="ti-angle-double-right"></i> -->
     <div class="container">
 
         <div class="main">
             <!-- navbar category -->
 
             <!-- item -->
-           
+
             <!-- hết -->
             <section>
                 <div class="guide">
@@ -260,7 +260,7 @@
     <script>
         let arrItem = {
             "topics": [{
-                "title": "Tiêu đề số 1",
+                "title": "Tiêu đề số 11111111111111111",
                 "desc": `Tick, Tick... Boom! là một phim ca nhạc rất đẹp và thật may mắn khi có thể xem nó dù ở thời điểm nào của cuộc đời. Người chớm 20 sẽ biết trân trọng thanh xuân mình có
                 , người gần 30 cũng có cơ hội nhìn lại chặng đường đã đi, những quyết định đã thực hiện.`,
                 "items": [{
@@ -385,7 +385,7 @@
                     "desc": "Trống đồng Đông Sơn aaa",
                     "date": "1635348353",
                     "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg"
-                },{
+                }, {
                     "id": 112,
                     "title": "Mũ thượng triều của Vua triều Nguyễn",
                     "desc": " Ấn tượng đặc biệt từ chiếc mũ thượng triều của vua nhnày ơng Tây.",
@@ -413,7 +413,7 @@
                     "desc": "Trống đồng Đông Sơn aaa",
                     "date": "1635348353",
                     "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg"
-                },{
+                }, {
                     "id": 122,
                     "title": "Mũ thượng triều của Vua triều Nguyễn",
                     "desc": " Ấn tượng đặc biệt từ chiếc mũ thượng triều của vua nhnày ơng Tây.",
@@ -442,8 +442,7 @@
                     "date": "1635348353",
                     "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg"
                 }]
-            },
-            {
+            }, {
                 "title": "Tiêu đề số 3",
                 "desc": "",
                 "items": [{
@@ -474,7 +473,7 @@
                     "desc": "Trống đồng Đông Sơn aaa",
                     "date": "1635348353",
                     "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg"
-                },{
+                }, {
                     "id": 1123,
                     "title": "Mũ thượng triều của Vua triều Nguyễn",
                     "desc": " Ấn tượng đặc biệt từ chiếc mũ thượng triều của vua nhnày ơng Tây.",
@@ -502,7 +501,7 @@
                     "desc": "Trống đồng Đông Sơn aaa",
                     "date": "1635348353",
                     "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg"
-                },{
+                }, {
                     "id": 1233,
                     "title": "Mũ thượng triều của Vua triều Nguyễn",
                     "desc": " Ấn tượng đặc biệt từ chiếc mũ thượng triều của vua nhnày ơng Tây.",
@@ -531,8 +530,7 @@
                     "date": "1635348353",
                     "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg"
                 }]
-            },
-            {
+            }, {
                 "title": "Tiêu đề số 4",
                 "desc": "",
                 "items": [{
@@ -564,7 +562,7 @@
                     "date": "1635348353",
                     "url_full": "https://hcloud.trealet.com/albums/Nhom08/Data/album1/L-ng-vua-Thi-u-Tr-.jpg"
                 }]
-            },{
+            }, {
                 "title": "Tiêu đề số 5",
                 "desc": "",
                 "items": [{
@@ -654,7 +652,7 @@
             // console.log(data);
         }
     </script>
-    <script  src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script async src="https://www.youtube.com/iframe_api"></script>
     <script>
         // function onYouTubeIframeAPIReady() {
@@ -689,9 +687,6 @@
         $('#title-list-card-0').waypoint(function() {
             console.log(5456456);
         });
-        
-           
-       
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -713,18 +708,23 @@
             // log(eTop1 - $(window).scrollTop()); //position of the ele w.r.t window
             const heightNav = $('.navbar').height();
             const titleCard = Object.values($('.title-list-card'));
-             
+
             const arrHeight = titleCard.map(value => {
                 return value.offsetTop - heightNav;
             })
             console.log(arrHeight);
-            
+
             $(window).scroll(function() { //when window is scrolled
                 arrHeight.forEach((element, index) => {
-                    if(Math.abs((element - window.scrollY)) < 110)  $('#title-main').text(`tiêu đề ${index+1}`)
+                    console.log(element);
+                    if (Math.abs((element - window.scrollY)) < 110) {
+                        var title = $(`#title-list-card-${index} h3`).text();
+                        $('#title-main').text(title);
+                    }
+
                 });
-                console.log(window.scrollY);
-               
+                // console.log(window.scrollY);
+
             });
 
         });
